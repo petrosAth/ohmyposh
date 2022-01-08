@@ -82,6 +82,7 @@
                     "rebase_icon": "REBASING",
                     "cherry_pick_icon": "CHERRY-PICKING",
                     "revert_icon": "REVERTING",
+                    "commit_icon": " ",
                     "no_commits_icon": "−",
 					"display_status": true,
 					"display_stash_count": true,

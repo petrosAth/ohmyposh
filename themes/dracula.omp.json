@@ -1,0 +1,204 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "console_title": true,
+    "console_title_style": "path",
+    "palette": {
+        "blackRock":         "#282A36",
+        "blueZodiac":        "#44475A",
+        "alabaster":         "#F8F8F2",
+        "electricBlue":      "#8BE9FD",
+        "waikawaGrey":       "#6272A4",
+        "mauve":             "#BD93F9",
+        "neonPink":          "#FF79C6",
+        "tomato":            "#FF5555",
+        "macaroniAndCheese": "#FFB86C",
+        "palePrim":          "#F1FA8C",
+        "screaminGreen":     "#50FA7B"
+    },
+	"blocks": [
+		{
+		"type": "prompt",
+		"alignment": "left",
+		"segments": [
+            {
+                "type": "exit",
+                "style": "plain",
+                "foreground": "p:screaminGreen",
+                "properties": {
+                    "display_exit_code": false,
+                    "always_enabled": true,
+                    "error_color": "p:tomato",
+                    "prefix": "",
+                    "postfix": "┬"
+                }
+            },
+			{
+				"type": "session",
+				"style": "plain",
+				"foreground": "p:mauve",
+				"properties": {
+					"template": "{{.UserName}}",
+					"prefix": "<p:waikawaGrey>[</>",
+					"postfix": ""
+				}
+			},
+			{
+				"type": "session",
+				"style": "plain",
+				"foreground": "p:neonPink",
+				"properties": {
+					"template": "{{if .Root}}<p:waikawaGrey>|</><p:palePrim></><p:waikawaGrey>|</>{{else}}<p:waikawaGrey>|</>@<p:waikawaGrey>|</>{{end}}",
+					"prefix": "",
+					"postfix": ""
+				}
+			},
+			{
+				"type": "session",
+				"style": "plain",
+				"foreground": "p:mauve",
+				"properties": {
+					"template": "{{.ComputerName}}",
+					"prefix": "",
+					"postfix": "<p:waikawaGrey>]</>"
+				}
+			},
+			{
+				"type": "path",
+				"style": "plain",
+				"foreground": "p:electricBlue",
+				"properties": {
+					"style": "full",
+					"prefix": "<p:waikawaGrey>[</>",
+					"postfix": "<p:waikawaGrey>]</>"
+				}
+			},
+			{
+				"type": "git",
+				"style": "plain",
+				"foreground": "p:palePrim",
+				"properties": {
+                    "branch_icon": " ",
+					"branch_max_length": 30,
+                    "rebase_icon": "REBASING",
+                    "cherry_pick_icon": "CHERRY-PICKING",
+                    "revert_icon": "REVERTING",
+                    "no_commits_icon": "−",
+					"display_status": true,
+					"display_stash_count": true,
+					"display_worktree_count": true,
+                    "status_separator_icon": "<p:macaroniAndCheese> |</>",
+					"display_upstream_icon": true,
+					"status_colors_enabled": false,
+					"color_background": false,
+					"local_changes_color": "p:tomato",
+					"working_color": "p:macaroniAndCheese",
+					"staging_color": "p:screaminGreen",
+					"behind_color": "p:tomato",
+					"ahead_color": "p:screaminGreen",
+					"prefix": "<p:waikawaGrey>[</>",
+					"postfix": "<p:waikawaGrey>]</>",
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} <p:macaroniAndCheese> {{.Working.String}}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <p:screaminGreen> {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}   {{.StashCount}}{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:alabaster>{{ end }}   {{if .IsWorkTree}}</>{{ end }}{{.WorktreeCount}}{{ end }}"
+				}
+			},
+            {
+                "type": "kubectl",
+                "style": "plain",
+                "foreground": "#174E9C",
+                "properties": {
+                    "prefix": "<p:waikawaGrey>[</>ﴱ ",
+                    "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+					"postfix": "<p:waikawaGrey>]</>"
+                }
+            }
+        ]
+		},
+		{
+		"type": "prompt",
+		"alignment": "left",
+		"newline": true,
+		"segments": [
+            {
+                "type": "exit",
+                "style": "plain",
+                "foreground": "p:screaminGreen",
+                "properties": {
+                    "display_exit_code": false,
+                    "always_enabled": true,
+                    "error_color": "p:tomato",
+                    "prefix": "",
+                    "postfix": "└"
+                }
+            },
+			{
+				"type": "os",
+				"style": "plain",
+				"foreground": "p:neonPink",
+				"properties": {
+					"windows": " ",
+					"macos": " ",
+					"linux": " ",
+					"alpine": " ",
+                    "aosc": " ",
+					"arch": " ",
+					"centos": " ",
+                    "coreos": " ",
+					"debian": " ",
+                    "devuan": " ",
+					"elementary": " ",
+                    "fedora": " ",
+                    "gentoo": " ",
+                    "mageia": " ",
+					"manjaro": " ",
+                    "mint": " ",
+                    "nixos": " ",
+					"opensuse": " ",
+					"raspbian": " ",
+                    "sabayon": " ",
+                    "slackware": " ",
+					"ubuntu": " ",
+					"wsl": "WSL",
+					"wsl_separator": " ",
+					"prefix": "<p:waikawaGrey>[</>",
+					"postfix": "<p:waikawaGrey>|</>"
+				}
+			},
+			{
+				"type": "shell",
+				"style": "plain",
+				"foreground": "p:neonPink",
+				"properties": {
+					"prefix": " ",
+					"postfix": "<p:waikawaGrey>]</>"
+				}
+			},
+            {
+                "type": "executiontime",
+                "style": "plain",
+                "powerline_symbol": "\uE0B0",
+                "foreground": "p:palePrim",
+                "properties": {
+                    "threshold": 2000,
+                    "style": "austin",
+                    "prefix": "<p:waikawaGrey>[</>祥",
+					"postfix": "<p:waikawaGrey>]</>"
+                }
+            },
+            {
+                "type": "exit",
+                "style": "plain",
+                "foreground": "p:screaminGreen",
+                "properties": {
+                    "display_exit_code": false,
+                    "always_enabled": true,
+                    "error_color": "p:tomato",
+                    "error_icon": "<p:waikawaGrey>[</><p:waikawaGrey>]</>",
+                    "prefix": "",
+                    "postfix": "❯"
+                }
+            }
+        ]
+		}
+	],
+    "final_space": true,
+    "osc99": true
+}

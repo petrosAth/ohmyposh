@@ -89,12 +89,12 @@
                     "fetch_worktree_count": true,
                     "branch_icon": " ",
 					"branch_max_length": 30,
-                    "commit_icon": " ",
-                    "rebase_icon": "REBASING",
-                    "cherry_pick_icon": "CHERRY-PICKING",
-                    "revert_icon": "REVERTING",
+                    "commit_icon": "  ",
+                    "rebase_icon": "REBASING ",
+                    "cherry_pick_icon": "CHERRY-PICKING ",
+                    "revert_icon": "REVERTING ",
                     "no_commits_icon": "−",
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} <p:macaroniAndCheese> </>{{ if gt .Working.Added 0 }}<p:screaminGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:tomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:macaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <p:screaminGreen> {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}   {{.StashCount}}{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:alabaster>{{ end }}   {{if .IsWorkTree}}</>{{ end }}{{.WorktreeCount}}{{ end }}",
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:waikawaGrey>|</><p:macaroniAndCheese> </>{{ if gt .Working.Added 0 }}<p:screaminGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:tomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:macaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}{{ end }}{{ if .Staging.Changed }}<p:waikawaGrey>|</><p:screaminGreen>  {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}<p:waikawaGrey>|</> {{.StashCount}}{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:waikawaGrey>|</><p:alabaster>{{ end }} {{if .IsWorkTree}}</>{{ end }}{{.WorktreeCount}}{{ end }}",
 					"prefix": "<p:waikawaGrey>[</>",
 					"postfix": "<p:waikawaGrey>]</>"
 				}

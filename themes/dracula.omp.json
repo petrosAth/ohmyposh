@@ -57,7 +57,7 @@
 				"style": "plain",
 				"foreground": "p:mauve",
 				"properties": {
-					"template": "{{.ComputerName}}",
+					"template": "{{.HostName}}",
 					"prefix": "",
 					"postfix": "<p:waikawaGrey>]</>"
 				}

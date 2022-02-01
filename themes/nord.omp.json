@@ -3,17 +3,22 @@
     "console_title": true,
     "console_title_style": "path",
     "palette": {
-        "draculaBlackRock":               "#282A36",
-        "draculaBlueZodiac":              "#44475A",
-        "draculaAlabaster":               "#F8F8F2",
-        "draculaElectricBlue":            "#8BE9FD",
-        "draculaWaikawaGrey":             "#6272A4",
-        "draculaMauve":                   "#BD93F9",
-        "draculaNeonPink":                "#FF79C6",
-        "draculaTomato":                  "#FF5555",
-        "draculaMacaroniAndCheese":       "#FFB86C",
-        "draculaPalePrim":                "#F1FA8C",
-        "draculaVeryLightMalachiteGreen": "#50FA7B"
+        "nordOuterSpace":     "#2e3440",
+        "nordCharcoal":       "#3b4252",
+        "nordPoliceBlue":     "#434c5e",
+        "nordIndependence":   "#4c566a",
+        "nordCultured":       "#d8dee9",
+        "nordBrightGray":     "#e5e9f0",
+        "nordIsabelline":     "#eceff4",
+        "nordPewterBlue":     "#8fbcbb",
+        "nordDarkSkyBlue":    "#88c0d0",
+        "nordDarkPastelBlue": "#81a1c1",
+        "nordRackley":        "#5e81ac",
+        "nordFuzzyWuzzy":     "#bf616a",
+        "nordCopper":         "#d08770",
+        "nordGold":           "#ebcb8b",
+        "nordLaurelGreen":    "#a3be8c",
+        "nordGlossyGrape":    "#b48ead"
     },
 	"blocks": [
 		{
@@ -23,11 +28,11 @@
             {
                 "type": "exit",
                 "style": "plain",
-                "foreground": "p:draculaVeryLightMalachiteGreen",
+                "foreground": "p:nordLaurelGreen",
                 "properties": {
                     "display_exit_code": false,
                     "always_enabled": true,
-                    "error_color": "p:draculaTomato",
+                    "error_color": "p:nordFuzzyWuzzy",
                     "prefix": "",
                     "postfix": "┬"
                 }
@@ -35,19 +40,19 @@
 			{
 				"type": "session",
 				"style": "plain",
-				"foreground": "p:draculaMauve",
+				"foreground": "p:nordPewterBlue",
 				"properties": {
 					"template": "{{.UserName}}",
-					"prefix": "<p:draculaWaikawaGrey>[</>",
+					"prefix": "<p:nordIndependence>[</>",
 					"postfix": ""
 				}
 			},
 			{
 				"type": "session",
 				"style": "plain",
-				"foreground": "p:draculaNeonPink",
+				"foreground": "p:nordDarkSkyBlue",
 				"properties": {
-					"template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim></><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}",
+					"template": "{{if .Root}}<p:nordIndependence>|</><p:nordGold></><p:nordIndependence>|</>{{else}}<p:nordIndependence>|</>@<p:nordIndependence>|</>{{end}}",
 					"prefix": "",
 					"postfix": ""
 				}
@@ -55,32 +60,32 @@
 			{
 				"type": "session",
 				"style": "plain",
-				"foreground": "p:draculaMauve",
+				"foreground": "p:nordPewterBlue",
 				"properties": {
 					"template": "{{.HostName}}",
 					"prefix": "",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+					"postfix": "<p:nordIndependence>]</>"
 				}
 			},
 			{
 				"type": "path",
 				"style": "plain",
-				"foreground": "p:draculaElectricBlue",
+				"foreground": "p:nordDarkPastelBlue",
 				"properties": {
 					"style": "full",
-					"prefix": "<p:draculaWaikawaGrey>[</>",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+					"prefix": "<p:nordIndependence>[</>",
+					"postfix": "<p:nordIndependence>]</>"
 				}
 			},
 			{
 				"type": "git",
 				"style": "plain",
-				"foreground": "p:draculaPalePrim",
+				"foreground": "p:nordGold",
                 "foreground_templates": [
-                    "{{ if or (.Working.Changed) (.Staging.Changed) }}p:draculaMacaroniAndCheese{{ end }}",
-                    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:draculaMacaroniAndCheese{{ end }}",
-                    "{{ if gt .Ahead 0 }}p:draculaVeryLightMalachiteGreen{{ end }}",
-                    "{{ if gt .Behind 0 }}p:draculaTomato{{ end }}"
+                    "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nordCopper{{ end }}",
+                    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nordCopper{{ end }}",
+                    "{{ if gt .Ahead 0 }}p:nordLaurelGreen{{ end }}",
+                    "{{ if gt .Behind 0 }}p:nordFuzzyWuzzy{{ end }}"
                 ],
 				"properties": {
                     "fetch_status": true,
@@ -94,9 +99,9 @@
                     "cherry_pick_icon": "CHERRY-PICKING ",
                     "revert_icon": "REVERTING ",
                     "no_commits_icon": "−",
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese> </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen>  {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.WorktreeCount}}</>{{ end }}{{ end }}",
-					"prefix": "<p:draculaWaikawaGrey>[</>",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nordIndependence>|</><p:nordCopper> </>{{ if gt .Working.Added 0 }}<p:nordLaurelGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nordCopper> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nordIndependence>|</><p:nordLaurelGreen>  {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}<p:nordIndependence>|</><p:nordGold> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nordIndependence>|</><p:nordGold> {{.WorktreeCount}}</>{{ end }}{{ end }}",
+					"prefix": "<p:nordIndependence>[</>",
+					"postfix": "<p:nordIndependence>]</>"
 				}
 			},
             {
@@ -104,9 +109,9 @@
                 "style": "plain",
                 "foreground": "#174E9C",
                 "properties": {
-                    "prefix": "<p:draculaWaikawaGrey>[</>ﴱ ",
+                    "prefix": "<p:nordIndependence>[</>ﴱ ",
                     "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+					"postfix": "<p:nordIndependence>]</>"
                 }
             }
         ]
@@ -119,11 +124,11 @@
             {
                 "type": "exit",
                 "style": "plain",
-                "foreground": "p:draculaVeryLightMalachiteGreen",
+                "foreground": "p:nordLaurelGreen",
                 "properties": {
                     "display_exit_code": false,
                     "always_enabled": true,
-                    "error_color": "p:draculaTomato",
+                    "error_color": "p:nordFuzzyWuzzy",
                     "prefix": "",
                     "postfix": "└"
                 }
@@ -131,7 +136,7 @@
 			{
 				"type": "os",
 				"style": "plain",
-				"foreground": "p:draculaNeonPink",
+				"foreground": "p:nordDarkSkyBlue",
 				"properties": {
 					"windows": " ",
 					"macos": " ",
@@ -157,39 +162,39 @@
 					"ubuntu": " ",
 					"wsl": "WSL",
 					"wsl_separator": " ",
-					"prefix": "<p:draculaWaikawaGrey>[</>",
-					"postfix": "<p:draculaWaikawaGrey>|</>"
+					"prefix": "<p:nordIndependence>[</>",
+					"postfix": "<p:nordIndependence>|</>"
 				}
 			},
 			{
 				"type": "shell",
 				"style": "plain",
-				"foreground": "p:draculaNeonPink",
+				"foreground": "p:nordDarkSkyBlue",
 				"properties": {
 					"prefix": " ",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+					"postfix": "<p:nordIndependence>]</>"
 				}
 			},
             {
                 "type": "executiontime",
                 "style": "plain",
-                "foreground": "p:draculaPalePrim",
+                "foreground": "p:nordGold",
                 "properties": {
                     "threshold": 2000,
                     "style": "austin",
-                    "prefix": "<p:draculaWaikawaGrey>[</>祥",
-					"postfix": "<p:draculaWaikawaGrey>]</>"
+                    "prefix": "<p:nordIndependence>[</>祥",
+					"postfix": "<p:nordIndependence>]</>"
                 }
             },
             {
                 "type": "exit",
                 "style": "plain",
-                "foreground": "p:draculaVeryLightMalachiteGreen",
+                "foreground": "p:nordLaurelGreen",
                 "properties": {
                     "display_exit_code": false,
                     "always_enabled": true,
-                    "error_color": "p:draculaTomato",
-                    "error_icon": "<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>",
+                    "error_color": "p:nordFuzzyWuzzy",
+                    "error_icon": "<p:nordIndependence>[</><p:nordIndependence>]</>",
                     "prefix": "",
                     "postfix": "❯"
                 }

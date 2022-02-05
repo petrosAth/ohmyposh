@@ -158,7 +158,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "\u276f"
+            "template": "{{ if gt .Code 0 }}<p:nordIndependence>[</><p:nordIndependence>]</>{{ end }}\uf460"
           },
           "style": "plain",
           "type": "exit"

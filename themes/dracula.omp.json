@@ -124,7 +124,7 @@
             "raspbian": "\uf315 ",
             "sabayon": "\uf317 ",
             "slackware": "\uf318 ",
-            "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL at {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
+            "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
             "ubuntu": "\uf31b ",
             "windows": "\uf871 ",
             "wsl": "WSL",

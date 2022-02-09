@@ -11,7 +11,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "\u252c"
+            "template": "┬"
           },
           "style": "plain",
           "type": "exit"
@@ -27,7 +27,7 @@
         {
           "foreground": "p:draculaNeonPink",
           "properties": {
-            "template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf0e7</><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}"
+            "template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim></><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}"
           },
           "style": "plain",
           "type": "session"
@@ -58,18 +58,18 @@
             "{{ if gt .Behind 0 }}p:draculaTomato{{ end }}"
           ],
           "properties": {
-            "branch_icon": "\uf418 ",
+            "branch_icon": " ",
             "branch_max_length": 30,
             "cherry_pick_icon": "CHERRY-PICKING ",
-            "commit_icon": "\uf417  ",
+            "commit_icon": "  ",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true,
-            "no_commits_icon": "\u2212",
+            "no_commits_icon": "−",
             "rebase_icon": "REBASING ",
             "revert_icon": "REVERTING ",
-            "template": "<p:draculaWaikawaGrey>[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese>\uf044 </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen>\uf046  {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaWaikawaGrey>]</>"
+            "template": "<p:draculaWaikawaGrey>[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese> </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen> </>{{ if gt .Staging.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaTomato> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaWaikawaGrey>]</>"
           },
           "style": "plain",
           "type": "git"

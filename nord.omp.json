@@ -11,7 +11,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "\u252c"
+            "template": "┬"
           },
           "style": "plain",
           "type": "exit"
@@ -27,7 +27,7 @@
         {
           "foreground": "p:nordDarkSkyBlue",
           "properties": {
-            "template": "{{if .Root}}<p:nordIndependence>|</><p:nordGold>\uf0e7</><p:nordIndependence>|</>{{else}}<p:nordIndependence>|</>@<p:nordIndependence>|</>{{end}}"
+            "template": "{{if .Root}}<p:nordIndependence>|</><p:nordGold></><p:nordIndependence>|</>{{else}}<p:nordIndependence>|</>@<p:nordIndependence>|</>{{end}}"
           },
           "style": "plain",
           "type": "session"
@@ -58,18 +58,18 @@
             "{{ if gt .Behind 0 }}p:nordFuzzyWuzzy{{ end }}"
           ],
           "properties": {
-            "branch_icon": "\uf418 ",
+            "branch_icon": " ",
             "branch_max_length": 30,
             "cherry_pick_icon": "CHERRY-PICKING ",
-            "commit_icon": "\uf417  ",
+            "commit_icon": "  ",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true,
-            "no_commits_icon": "\u2212",
+            "no_commits_icon": "−",
             "rebase_icon": "REBASING ",
             "revert_icon": "REVERTING ",
-            "template": "<p:nordIndependence>[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nordIndependence>|</><p:nordCopper>\uf044 </>{{ if gt .Working.Added 0 }}<p:nordLaurelGreen>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nordCopper> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nordIndependence>|</><p:nordLaurelGreen>\uf046  {{.Staging.String}}</>{{ end }}{{ if gt .StashCount 0 }}<p:nordIndependence>|</><p:nordGold>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nordIndependence>|</><p:nordGold>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nordIndependence>]</>"
+            "template": "<p:nordIndependence>[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nordIndependence>|</><p:nordCopper> </>{{ if gt .Working.Added 0 }}<p:nordLaurelGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nordCopper> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nordIndependence>|</><p:nordLaurelGreen> </>{{ if gt .Staging.Added 0 }}<p:nordLaurelGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nordCopper> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nordIndependence>|</><p:nordGold> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nordIndependence>|</><p:nordGold> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nordIndependence>]</>"
           },
           "style": "plain",
           "type": "git"

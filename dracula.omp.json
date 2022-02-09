@@ -77,7 +77,7 @@
         {
           "foreground": "#174E9C",
           "properties": {
-            "template": "<p:draculaWaikawaGrey>[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaWaikawaGrey>]</>"
+            "template": "<p:draculaWaikawaGrey>[</>ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaWaikawaGrey>]</>"
           },
           "style": "plain",
           "type": "kubectl"
@@ -96,7 +96,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "\u2514"
+            "template": "└"
           },
           "style": "plain",
           "type": "exit"
@@ -104,29 +104,29 @@
         {
           "foreground": "p:draculaNeonPink",
           "properties": {
-            "alpine": "\uf300 ",
-            "aosc": "\uf301 ",
-            "arch": "\uf303 ",
-            "centos": "\uf304 ",
-            "coreos": "\uf305 ",
-            "debian": "\uf306 ",
-            "devuan": "\uf307 ",
-            "elementary": "\uf309 ",
-            "fedora": "\uf30a ",
-            "gentoo": "\uf30d ",
-            "linux": "\uf31a ",
-            "macos": "\uf302 ",
-            "mageia": "\uf310 ",
-            "manjaro": "\uf312 ",
-            "mint": "\uf30e ",
-            "nixos": "\uf313 ",
-            "opensuse": "\uf314 ",
-            "raspbian": "\uf315 ",
-            "sabayon": "\uf317 ",
-            "slackware": "\uf318 ",
-            "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
-            "ubuntu": "\uf31b ",
-            "windows": "\uf871 ",
+            "alpine": " ",
+            "aosc": " ",
+            "arch": " ",
+            "centos": " ",
+            "coreos": " ",
+            "debian": " ",
+            "devuan": " ",
+            "elementary": " ",
+            "fedora": " ",
+            "gentoo": " ",
+            "linux": " ",
+            "macos": " ",
+            "mageia": " ",
+            "manjaro": " ",
+            "mint": " ",
+            "nixos": " ",
+            "opensuse": " ",
+            "raspbian": " ",
+            "sabayon": " ",
+            "slackware": " ",
+            "template": "<p:nordIndependence>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nordIndependence>|</>",
+            "ubuntu": " ",
+            "windows": " ",
             "wsl": "WSL",
             "wsl_separator": " "
           },
@@ -145,7 +145,7 @@
           "foreground": "p:draculaPalePrim",
           "properties": {
             "style": "austin",
-            "template": "<p:draculaWaikawaGrey>[</>\ufa1a{{ .FormattedMs }}<p:draculaWaikawaGrey>]</>",
+            "template": "<p:draculaWaikawaGrey>[</>祥{{ .FormattedMs }}<p:draculaWaikawaGrey>]</>",
             "threshold": 2000
           },
           "style": "plain",

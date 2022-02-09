@@ -124,7 +124,7 @@
             "raspbian": " ",
             "sabayon": " ",
             "slackware": " ",
-            "template": "<p:nordIndependence>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nordIndependence>|</>",
+            "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
             "ubuntu": " ",
             "windows": " ",
             "wsl": "WSL",

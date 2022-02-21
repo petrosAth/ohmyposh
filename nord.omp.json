@@ -17,7 +17,7 @@
           "type": "exit"
         },
         {
-          "foreground": "p:nordPewterBlue",
+          "foreground": "p:nordDarkPastelBlue",
           "properties": {
             "template": "<p:nordIndependence>[</>{{.UserName}}"
           },
@@ -33,7 +33,7 @@
           "type": "session"
         },
         {
-          "foreground": "p:nordPewterBlue",
+          "foreground": "p:nordDarkPastelBlue",
           "properties": {
             "template": "{{.HostName}}<p:nordIndependence>]</>"
           },
@@ -41,7 +41,7 @@
           "type": "session"
         },
         {
-          "foreground": "p:nordDarkPastelBlue",
+          "foreground": "p:nordPewterBlue",
           "properties": {
             "style": "full",
             "template": "<p:nordIndependence>[</>{{ .Path }}<p:nordIndependence>]</>"

@@ -142,10 +142,13 @@
           "type": "shell"
         },
         {
-          "foreground": "p:nordGold",
+          "foreground": "p:nordLaurelGreen",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:nordFuzzyWuzzy{{ end }}"
+          ],
           "properties": {
             "style": "austin",
-            "template": "<p:nordIndependence>╾╼[</>祥{{ .FormattedMs }}<p:nordIndependence>]</>",
+            "template": "╾╼<p:nordIndependence>[</><p:nordGold>祥{{ .FormattedMs }}</><p:nordIndependence>]</>",
             "threshold": 2000
           },
           "style": "plain",

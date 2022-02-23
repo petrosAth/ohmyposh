@@ -142,10 +142,13 @@
           "type": "shell"
         },
         {
-          "foreground": "p:draculaPalePrim",
+          "foreground": "p:draculaVeryLightMalachiteGreen",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
+          ],
           "properties": {
             "style": "austin",
-            "template": "<p:draculaWaikawaGrey>╾╼[</>祥{{ .FormattedMs }}<p:draculaWaikawaGrey>]</>",
+            "template": "╾╼<p:draculaWaikawaGrey>[</><p:draculaPalePrim>祥{{ .FormattedMs }}</><p:draculaWaikawaGrey>]</>",
             "threshold": 2000
           },
           "style": "plain",

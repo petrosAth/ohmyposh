@@ -173,7 +173,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:nordGlossyGrape",
-    "template": "<p:nordIndependence>╼[</> {{ now | date \"15:04:05\" }}<p:nordIndependence>]</> "
+    "template": "<p:nordIndependence>╼[</>{{ now | date \"02-01<p:nordIndependence>|</>15:04:05\" }}<p:nordIndependence>]</> "
   },
   "console_title": true,
   "console_title_style": "template",

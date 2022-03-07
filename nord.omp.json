@@ -161,7 +161,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:nordIndependence>[</><p:nordIndependence>]</>{{ end }}"
+            "template": "{{ if gt .Code 0 }}╾╼<p:nordIndependence>[</><p:nordIndependence>]</>{{ end }}❯ "
           },
           "style": "plain",
           "type": "exit"
@@ -173,12 +173,12 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:nordGold",
-    "template": "<p:nordIndependence>╼[</>{{ now | date \" 01-02<p:nordIndependence>|</> 15:04:05\" }}<p:nordIndependence>]</> "
+    "template": "<p:nordIndependence>╼[</>{{ now | date \" 01-02<p:nordIndependence>|</> 15:04:05\" }}<p:nordIndependence>]❯</> "
   },
   "console_title": true,
   "console_title_style": "template",
   "console_title_template": "{{ .Folder }}",
-  "final_space": true,
+  "final_space": false,
   "osc99": true,
   "palette": {
     "nordBrightGray": "#e5e9f0",

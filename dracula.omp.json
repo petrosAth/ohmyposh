@@ -161,7 +161,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>{{ end }}"
+            "template": "{{ if gt .Code 0 }}╾╼<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>{{ end }}❯ "
           },
           "style": "plain",
           "type": "exit"
@@ -173,12 +173,12 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:draculaPalePrim",
-    "template": "<p:draculaWaikawaGrey>╼[</>{{ now | date \" 01-02<p:draculaWaikawaGrey>|</> 15:04:05\" }}<p:draculaWaikawaGrey>]</> "
+    "template": "<p:draculaWaikawaGrey>╼[</>{{ now | date \" 01-02<p:draculaWaikawaGrey>|</> 15:04:05\" }}<p:draculaWaikawaGrey>]❯</> "
   },
   "console_title": true,
   "console_title_style": "template",
   "console_title_template": "{{ .Folder }}",
-  "final_space": true,
+  "final_space": false,
   "osc99": true,
   "palette": {
     "draculaAlabaster": "#F8F8F2",

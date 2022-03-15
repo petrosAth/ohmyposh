@@ -5,9 +5,9 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:nordLaurelGreen",
+          "foreground": "p:nord14",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nordFuzzyWuzzy{{ end }}"
+            "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
             "always_enabled": true,
@@ -17,45 +17,45 @@
           "type": "exit"
         },
         {
-          "foreground": "p:nordDarkPastelBlue",
+          "foreground": "p:nord9",
           "properties": {
-            "template": "<p:nordIndependence>[</>{{.UserName}}"
+            "template": "<p:nord2>[</>{{.UserName}}"
           },
           "style": "plain",
           "type": "session"
         },
         {
-          "foreground": "p:nordDarkSkyBlue",
+          "foreground": "p:nord8",
           "properties": {
-            "template": "{{if .Root}}<p:nordIndependence>|</><p:nordGold></><p:nordIndependence>|</>{{else}}<p:nordIndependence>|</>@<p:nordIndependence>|</>{{end}}"
+            "template": "{{if .Root}}<p:nord2>|</><p:nord13></><p:nord2>|</>{{else}}<p:nord2>|</>@<p:nord2>|</>{{end}}"
           },
           "style": "plain",
           "type": "session"
         },
         {
-          "foreground": "p:nordDarkPastelBlue",
+          "foreground": "p:nord9",
           "properties": {
-            "template": "{{.HostName}}<p:nordIndependence>]</>"
+            "template": "{{.HostName}}<p:nord2>]</>"
           },
           "style": "plain",
           "type": "session"
         },
         {
-          "foreground": "p:nordPewterBlue",
+          "foreground": "p:nord7",
           "properties": {
             "style": "full",
-            "template": "<p:nordIndependence>╾╼[</>{{ .Path }}<p:nordIndependence>]</>"
+            "template": "<p:nord2>╾╼[</>{{ .Path }}<p:nord2>]</>"
           },
           "style": "plain",
           "type": "path"
         },
         {
-          "foreground": "p:nordCopper",
+          "foreground": "p:nord12",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nordGold{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nordGold{{ end }}",
-            "{{ if gt .Ahead 0 }}p:nordLaurelGreen{{ end }}",
-            "{{ if gt .Behind 0 }}p:nordFuzzyWuzzy{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nord13{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nord13{{ end }}",
+            "{{ if gt .Ahead 0 }}p:nord14{{ end }}",
+            "{{ if gt .Behind 0 }}p:nord11{{ end }}"
           ],
           "properties": {
             "branch_icon": " ",
@@ -69,7 +69,7 @@
             "no_commits_icon": "−",
             "rebase_icon": "REBASING ",
             "revert_icon": "REVERTING ",
-            "template": "<p:nordIndependence>╾╼[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nordIndependence>|</><p:nordGold> </>{{ if gt .Working.Added 0 }}<p:nordLaurelGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nordGold> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nordIndependence>|</><p:nordLaurelGreen> </>{{ if gt .Staging.Added 0 }}<p:nordLaurelGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nordFuzzyWuzzy> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nordGold> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nordIndependence>|</><p:nordCopper> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nordIndependence>|</><p:nordCopper> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nordIndependence>]</>"
+            "template": "<p:nord2>╾╼[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13> </>{{ if gt .Working.Added 0 }}<p:nord14> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14> </>{{ if gt .Staging.Added 0 }}<p:nord14> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>"
           },
           "style": "plain",
           "type": "git"
@@ -77,7 +77,7 @@
         {
           "foreground": "#174E9C",
           "properties": {
-            "template": "<p:nordIndependence>╾╼[</>ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:nordIndependence>]</>"
+            "template": "<p:nord2>╾╼[</>ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:nord2>]</>"
           },
           "style": "plain",
           "type": "kubectl"
@@ -90,9 +90,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:nordLaurelGreen",
+          "foreground": "p:nord14",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nordFuzzyWuzzy{{ end }}"
+            "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
             "always_enabled": true,
@@ -102,7 +102,7 @@
           "type": "exit"
         },
         {
-          "foreground": "p:nordDarkSkyBlue",
+          "foreground": "p:nord8",
           "properties": {
             "alpine": " ",
             "aosc": " ",
@@ -124,7 +124,7 @@
             "raspbian": " ",
             "sabayon": " ",
             "slackware": " ",
-            "template": "<p:nordIndependence>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nordIndependence>|</>",
+            "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nord2>|</>",
             "ubuntu": " ",
             "windows": " ",
             "wsl": "WSL",
@@ -134,34 +134,34 @@
           "type": "os"
         },
         {
-          "foreground": "p:nordDarkSkyBlue",
+          "foreground": "p:nord8",
           "properties": {
-            "template": " {{ .Name }}<p:nordIndependence>]</>"
+            "template": " {{ .Name }}<p:nord2>]</>"
           },
           "style": "plain",
           "type": "shell"
         },
         {
-          "foreground": "p:nordLaurelGreen",
+          "foreground": "p:nord14",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nordFuzzyWuzzy{{ end }}"
+            "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
             "style": "austin",
-            "template": "╾╼<p:nordIndependence>[</><p:nordCopper>祥{{ .FormattedMs }}</><p:nordIndependence>]</>",
+            "template": "╾╼<p:nord2>[</><p:nord12>祥{{ .FormattedMs }}</><p:nord2>]</>",
             "threshold": 2000
           },
           "style": "plain",
           "type": "executiontime"
         },
         {
-          "foreground": "p:nordLaurelGreen",
+          "foreground": "p:nord14",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nordFuzzyWuzzy{{ end }}"
+            "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
             "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:nordIndependence>[</><p:nordIndependence>]</>{{ end }}❯ "
+            "template": "{{ if gt .Code 0 }}╾╼<p:nord2>[</><p:nord2>]</>{{ end }}❯ "
           },
           "style": "plain",
           "type": "exit"
@@ -172,8 +172,8 @@
   ],
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "p:nordCopper",
-    "template": "<p:nordIndependence>╼[</>{{ now | date \" 01-02<p:nordIndependence>|</> 15:04:05\" }}<p:nordIndependence>]❯</> "
+    "foreground": "p:nord15",
+    "template": "<p:nord2>╼[</>{{ now | date \" 01-02\" }}<p:nord2>|</>{{ now | date \" 15:04:05\" }}<p:nord2>]❯</> "
   },
   "console_title": true,
   "console_title_style": "template",
@@ -181,22 +181,22 @@
   "final_space": false,
   "osc99": true,
   "palette": {
-    "nordBrightGray": "#e5e9f0",
-    "nordCharcoal": "#3b4252",
-    "nordCopper": "#d08770",
-    "nordCultured": "#d8dee9",
-    "nordDarkPastelBlue": "#81a1c1",
-    "nordDarkSkyBlue": "#88c0d0",
-    "nordFuzzyWuzzy": "#bf616a",
-    "nordGlossyGrape": "#b48ead",
-    "nordGold": "#ebcb8b",
-    "nordIndependence": "#4c566a",
-    "nordIsabelline": "#eceff4",
-    "nordLaurelGreen": "#a3be8c",
-    "nordOuterSpace": "#2e3440",
-    "nordPewterBlue": "#8fbcbb",
-    "nordPoliceBlue": "#434c5e",
-    "nordRackley": "#5e81ac"
+    "nord0":  "#2e3440",
+    "nord1":  "#3b4252",
+    "nord2":  "#434c5e",
+    "nord3":  "#4c566a",
+    "nord4":  "#d8dee9",
+    "nord5":  "#e5e9f0",
+    "nord6":  "#eceff4",
+    "nord7":  "#8fbcbb",
+    "nord8":  "#88c0d0",
+    "nord9":  "#81a1c1",
+    "nord10": "#5e81ac",
+    "nord11": "#bf616a",
+    "nord12": "#d08770",
+    "nord13": "#ebcb8b",
+    "nord14": "#a3be8c",
+    "nord15": "#b48ead"
   },
   "version": 1
 }

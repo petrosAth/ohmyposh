@@ -50,7 +50,7 @@
           "type": "path"
         },
         {
-          "foreground": "p:nord12",
+          "foreground": "p:nord10",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nord13{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nord13{{ end }}",

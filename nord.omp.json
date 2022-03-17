@@ -173,7 +173,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:nord2",
-    "template": "╼[{{ now | date \"<p:nord15> 01-02</>|<p:nord15> 15:04:05</>\" }}<p:nord2>]❯</> "
+    "template": "╼[<p:nord15>{{ now | date \" 01-02\" }}</>|<p:nord15>{{ now | date \" 15:04:05\" }}</>]❯ "
   },
   "console_title": true,
   "console_title_style": "template",

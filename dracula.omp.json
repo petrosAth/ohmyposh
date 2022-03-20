@@ -172,8 +172,8 @@
   ],
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "p:draculaPalePrim",
-    "template": "<p:draculaWaikawaGrey>╼[</>{{ now | date \" 01-02<p:draculaWaikawaGrey>|</> 15:04:05\" }}<p:draculaWaikawaGrey>]❯</> "
+    "foreground": "p:draculaWaikawaGrey",
+    "template": "╼[<p:draculaPalePrim>{{ now | date \" 02\" }}</>|<p:draculaPalePrim>{{ now | date \" 15:04:05\" }}</>]╾╼[<p:draculaElectricBlue>{{ .PWD }}</>]: "
   },
   "console_title": true,
   "console_title_style": "template",

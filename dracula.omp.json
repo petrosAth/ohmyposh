@@ -161,7 +161,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>{{ end }}❯ "
+            "template": "{{ if gt .Code 0 }}╾╼<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>{{ end }} "
           },
           "style": "plain",
           "type": "exit"

@@ -161,7 +161,7 @@
           ],
           "properties": {
             "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:nord2>[</><p:nord2>]</>{{ end }}❯ "
+            "template": "{{ if gt .Code 0 }}╾╼<p:nord2>[</><p:nord2>]</>{{ end }} "
           },
           "style": "plain",
           "type": "exit"

@@ -10,43 +10,37 @@
             "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "┮"
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "\u252e",
           "type": "exit"
         },
         {
           "foreground": "p:draculaMauve",
-          "properties": {
-            "template": "<p:draculaWaikawaGrey>[</>{{.UserName}}"
-          },
           "style": "plain",
+          "template": "<p:draculaWaikawaGrey>[</>{{.UserName}}",
           "type": "session"
         },
         {
           "foreground": "p:draculaNeonPink",
-          "properties": {
-            "template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim></><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}"
-          },
           "style": "plain",
+          "template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf0e7</><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}",
           "type": "session"
         },
         {
           "foreground": "p:draculaMauve",
-          "properties": {
-            "template": "{{.HostName}}<p:draculaWaikawaGrey>]</>"
-          },
           "style": "plain",
+          "template": "{{.HostName}}<p:draculaWaikawaGrey>]</>",
           "type": "session"
         },
         {
           "foreground": "p:draculaElectricBlue",
           "properties": {
-            "style": "full",
-            "template": "<p:draculaWaikawaGrey>╾╼[</>{{ .Path }}<p:draculaWaikawaGrey>]</>"
+            "style": "full"
           },
           "style": "plain",
+          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>{{ .Path }}<p:draculaWaikawaGrey>]</>",
           "type": "path"
         },
         {
@@ -58,28 +52,26 @@
             "{{ if gt .Behind 0 }}p:draculaTomato{{ end }}"
           ],
           "properties": {
-            "branch_icon": " ",
+            "branch_icon": "\uf418 ",
             "branch_max_length": 30,
             "cherry_pick_icon": "CHERRY-PICKING ",
-            "commit_icon": "  ",
+            "commit_icon": "\uf417  ",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true,
-            "no_commits_icon": "−",
+            "no_commits_icon": "\u2212",
             "rebase_icon": "REBASING ",
-            "revert_icon": "REVERTING ",
-            "template": "<p:draculaWaikawaGrey>╾╼[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese> </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen> </>{{ if gt .Staging.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaTomato> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaWaikawaGrey>]</>"
+            "revert_icon": "REVERTING "
           },
           "style": "plain",
+          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese>\uf044 </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen>\uf046 </>{{ if gt .Staging.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaTomato> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaWaikawaGrey>]</>",
           "type": "git"
         },
         {
           "foreground": "#174E9C",
-          "properties": {
-            "template": "<p:draculaWaikawaGrey>╾╼[</>ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaWaikawaGrey>]</>"
-          },
           "style": "plain",
+          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaWaikawaGrey>]</>",
           "type": "kubectl"
         }
       ],
@@ -95,50 +87,48 @@
             "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "┕"
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "\u2515",
           "type": "exit"
         },
         {
           "foreground": "p:draculaNeonPink",
           "properties": {
-            "alpine": " ",
-            "aosc": " ",
-            "arch": " ",
-            "centos": " ",
-            "coreos": " ",
-            "debian": " ",
-            "devuan": " ",
-            "elementary": " ",
-            "fedora": " ",
-            "gentoo": " ",
-            "linux": " ",
-            "macos": " ",
-            "mageia": " ",
-            "manjaro": " ",
-            "mint": " ",
-            "nixos": " ",
-            "opensuse": " ",
-            "raspbian": " ",
-            "sabayon": " ",
-            "slackware": " ",
-            "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
-            "ubuntu": " ",
-            "windows": " ",
+            "alpine": "\uf300 ",
+            "aosc": "\uf301 ",
+            "arch": "\uf303 ",
+            "centos": "\uf304 ",
+            "coreos": "\uf305 ",
+            "debian": "\uf306 ",
+            "devuan": "\uf307 ",
+            "elementary": "\uf309 ",
+            "fedora": "\uf30a ",
+            "gentoo": "\uf30d ",
+            "linux": "\uf31a ",
+            "macos": "\uf302 ",
+            "mageia": "\uf310 ",
+            "manjaro": "\uf312 ",
+            "mint": "\uf30e ",
+            "nixos": "\uf313 ",
+            "opensuse": "\uf314 ",
+            "raspbian": "\uf315 ",
+            "sabayon": "\uf317 ",
+            "slackware": "\uf318 ",
+            "ubuntu": "\uf31b ",
+            "windows": "\uf871 ",
             "wsl": "WSL",
             "wsl_separator": " "
           },
           "style": "plain",
+          "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
           "type": "os"
         },
         {
           "foreground": "p:draculaNeonPink",
-          "properties": {
-            "template": " {{ .Name }}<p:draculaWaikawaGrey>]</>"
-          },
           "style": "plain",
+          "template": "\uf489 {{ .Name }}<p:draculaWaikawaGrey>]</>",
           "type": "shell"
         },
         {
@@ -148,10 +138,10 @@
           ],
           "properties": {
             "style": "austin",
-            "template": "╾╼<p:draculaWaikawaGrey>[</><p:draculaPalePrim>祥{{ .FormattedMs }}</><p:draculaWaikawaGrey>]</>",
             "threshold": 2000
           },
           "style": "plain",
+          "template": "\u257e\u257c<p:draculaWaikawaGrey>[</><p:draculaPalePrim>\ufa1a{{ .FormattedMs }}</><p:draculaWaikawaGrey>]</>",
           "type": "executiontime"
         },
         {
@@ -160,25 +150,17 @@
             "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:draculaWaikawaGrey>[</><p:draculaWaikawaGrey>]</>{{ end }} "
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaWaikawaGrey>[</>\uf655<p:draculaWaikawaGrey>]</>{{ end }}\uf460 ",
           "type": "exit"
         }
       ],
       "type": "prompt"
     }
   ],
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "p:draculaWaikawaGrey",
-    "template": "╼[<p:draculaPalePrim>{{ now | date \" 02\" }}</>|<p:draculaPalePrim>{{ now | date \" 15:04:05\" }}</>]╾╼[<p:draculaElectricBlue>{{ .PWD }}</>]: "
-  },
-  "console_title": true,
-  "console_title_style": "template",
   "console_title_template": "{{ .Folder }}",
-  "final_space": false,
   "osc99": true,
   "palette": {
     "draculaAlabaster": "#F8F8F2",
@@ -193,5 +175,10 @@
     "draculaVeryLightMalachiteGreen": "#50FA7B",
     "draculaWaikawaGrey": "#6272A4"
   },
-  "version": 1
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:draculaWaikawaGrey",
+    "template": "\u257c[<p:draculaPalePrim>{{ now | date \"\uf5ed 02\" }}</>|<p:draculaPalePrim>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:draculaElectricBlue>{{ .PWD }}</>]: "
+  },
+  "version": 2
 }

@@ -10,43 +10,37 @@
             "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "┮"
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "\u252e",
           "type": "exit"
         },
         {
           "foreground": "p:nord9",
-          "properties": {
-            "template": "<p:nord2>[</>{{.UserName}}"
-          },
           "style": "plain",
+          "template": "<p:nord2>[</>{{.UserName}}",
           "type": "session"
         },
         {
           "foreground": "p:nord8",
-          "properties": {
-            "template": "{{if .Root}}<p:nord2>|</><p:nord13></><p:nord2>|</>{{else}}<p:nord2>|</>@<p:nord2>|</>{{end}}"
-          },
           "style": "plain",
+          "template": "{{if .Root}}<p:nord2>|</><p:nord13>\uf0e7</><p:nord2>|</>{{else}}<p:nord2>|</>@<p:nord2>|</>{{end}}",
           "type": "session"
         },
         {
           "foreground": "p:nord9",
-          "properties": {
-            "template": "{{.HostName}}<p:nord2>]</>"
-          },
           "style": "plain",
+          "template": "{{.HostName}}<p:nord2>]</>",
           "type": "session"
         },
         {
           "foreground": "p:nord7",
           "properties": {
-            "style": "full",
-            "template": "<p:nord2>╾╼[</>{{ .Path }}<p:nord2>]</>"
+            "style": "full"
           },
           "style": "plain",
+          "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
           "type": "path"
         },
         {
@@ -58,28 +52,26 @@
             "{{ if gt .Behind 0 }}p:nord11{{ end }}"
           ],
           "properties": {
-            "branch_icon": " ",
+            "branch_icon": "\uf418 ",
             "branch_max_length": 30,
             "cherry_pick_icon": "CHERRY-PICKING ",
-            "commit_icon": "  ",
+            "commit_icon": "\uf417  ",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true,
-            "no_commits_icon": "−",
+            "no_commits_icon": "\u2212",
             "rebase_icon": "REBASING ",
-            "revert_icon": "REVERTING ",
-            "template": "<p:nord2>╾╼[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13> </>{{ if gt .Working.Added 0 }}<p:nord14> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14> </>{{ if gt .Staging.Added 0 }}<p:nord14> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12> {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>"
+            "revert_icon": "REVERTING "
           },
           "style": "plain",
+          "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13>\uf044 </>{{ if gt .Working.Added 0 }}<p:nord14> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14>\uf046 </>{{ if gt .Staging.Added 0 }}<p:nord14> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
           "type": "git"
         },
         {
           "foreground": "#174E9C",
-          "properties": {
-            "template": "<p:nord2>╾╼[</>ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:nord2>]</>"
-          },
           "style": "plain",
+          "template": "<p:nord2>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:nord2>]</>",
           "type": "kubectl"
         }
       ],
@@ -95,50 +87,48 @@
             "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "┕"
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "\u2515",
           "type": "exit"
         },
         {
           "foreground": "p:nord8",
           "properties": {
-            "alpine": " ",
-            "aosc": " ",
-            "arch": " ",
-            "centos": " ",
-            "coreos": " ",
-            "debian": " ",
-            "devuan": " ",
-            "elementary": " ",
-            "fedora": " ",
-            "gentoo": " ",
-            "linux": " ",
-            "macos": " ",
-            "mageia": " ",
-            "manjaro": " ",
-            "mint": " ",
-            "nixos": " ",
-            "opensuse": " ",
-            "raspbian": " ",
-            "sabayon": " ",
-            "slackware": " ",
-            "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nord2>|</>",
-            "ubuntu": " ",
-            "windows": " ",
+            "alpine": "\uf300 ",
+            "aosc": "\uf301 ",
+            "arch": "\uf303 ",
+            "centos": "\uf304 ",
+            "coreos": "\uf305 ",
+            "debian": "\uf306 ",
+            "devuan": "\uf307 ",
+            "elementary": "\uf309 ",
+            "fedora": "\uf30a ",
+            "gentoo": "\uf30d ",
+            "linux": "\uf31a ",
+            "macos": "\uf302 ",
+            "mageia": "\uf310 ",
+            "manjaro": "\uf312 ",
+            "mint": "\uf30e ",
+            "nixos": "\uf313 ",
+            "opensuse": "\uf314 ",
+            "raspbian": "\uf315 ",
+            "sabayon": "\uf317 ",
+            "slackware": "\uf318 ",
+            "ubuntu": "\uf31b ",
+            "windows": "\uf871 ",
             "wsl": "WSL",
             "wsl_separator": " "
           },
           "style": "plain",
+          "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nord2>|</>",
           "type": "os"
         },
         {
           "foreground": "p:nord8",
-          "properties": {
-            "template": " {{ .Name }}<p:nord2>]</>"
-          },
           "style": "plain",
+          "template": "\uf489 {{ .Name }}<p:nord2>]</>",
           "type": "shell"
         },
         {
@@ -148,10 +138,10 @@
           ],
           "properties": {
             "style": "austin",
-            "template": "╾╼<p:nord2>[</><p:nord12>祥{{ .FormattedMs }}</><p:nord2>]</>",
             "threshold": 2000
           },
           "style": "plain",
+          "template": "\u257e\u257c<p:nord2>[</><p:nord12>\ufa1a{{ .FormattedMs }}</><p:nord2>]</>",
           "type": "executiontime"
         },
         {
@@ -160,43 +150,40 @@
             "{{ if gt .Code 0 }}p:nord11{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "{{ if gt .Code 0 }}╾╼<p:nord2>[</><p:nord2>]</>{{ end }} "
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\uf655<p:nord2>]</>{{ end }}\uf460 ",
           "type": "exit"
         }
       ],
       "type": "prompt"
     }
   ],
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "p:nord2",
-    "template": "╼[<p:nord12>{{ now | date \" 02\" }}</>|<p:nord12>{{ now | date \" 15:04:05\" }}</>]╾╼[<p:nord7>{{ .PWD }}</>]: "
-  },
-  "console_title": true,
-  "console_title_style": "template",
   "console_title_template": "{{ .Folder }}",
-  "final_space": false,
   "osc99": true,
   "palette": {
-    "nord0":  "#2e3440",
-    "nord1":  "#3b4252",
-    "nord2":  "#434c5e",
-    "nord3":  "#4c566a",
-    "nord4":  "#d8dee9",
-    "nord5":  "#e5e9f0",
-    "nord6":  "#eceff4",
-    "nord7":  "#8fbcbb",
-    "nord8":  "#88c0d0",
-    "nord9":  "#81a1c1",
+    "nord0": "#2e3440",
+    "nord1": "#3b4252",
     "nord10": "#5e81ac",
     "nord11": "#bf616a",
     "nord12": "#d08770",
     "nord13": "#ebcb8b",
     "nord14": "#a3be8c",
-    "nord15": "#b48ead"
+    "nord15": "#b48ead",
+    "nord2": "#434c5e",
+    "nord3": "#4c566a",
+    "nord4": "#d8dee9",
+    "nord5": "#e5e9f0",
+    "nord6": "#eceff4",
+    "nord7": "#8fbcbb",
+    "nord8": "#88c0d0",
+    "nord9": "#81a1c1"
   },
-  "version": 1
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:nord2",
+    "template": "\u257c[<p:nord12>{{ now | date \"\uf5ed 02\" }}</>|<p:nord12>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: "
+  },
+  "version": 2
 }

@@ -161,7 +161,7 @@
     }
   ],
   "console_title_template": "{{ .Folder }}",
-  "osc99": true,
+  "osc99": false,
   "palette": {
     "nord0": "#2e3440",
     "nord1": "#3b4252",

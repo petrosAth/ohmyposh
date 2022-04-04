@@ -161,7 +161,7 @@
     }
   ],
   "console_title_template": "{{ .Folder }}",
-  "osc99": true,
+  "osc99": false,
   "palette": {
     "draculaAlabaster": "#F8F8F2",
     "draculaBlackRock": "#282A36",

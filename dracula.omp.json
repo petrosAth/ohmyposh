@@ -1,5 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
   "blocks": [
     {
       "alignment": "left",
@@ -153,7 +154,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaWaikawaGrey>[</>\uf655<p:draculaWaikawaGrey>]</>{{ end }}\uf460 ",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaWaikawaGrey>[</>\uf655<p:draculaWaikawaGrey>]</>{{ end }}\u276f",
           "type": "exit"
         }
       ],

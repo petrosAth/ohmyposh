@@ -186,5 +186,10 @@
     "foreground": "p:nord2",
     "template": "\u257c[<p:nord12>{{ now | date \"\uf5ed 02\" }}</>|<p:nord12>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: "
   },
+  "secondary_prompt": {
+    "background": "transparent",
+    "foreground": "p:nord2",
+    "template": " "
+  },
   "version": 2
 }

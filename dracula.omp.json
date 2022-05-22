@@ -179,7 +179,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:draculaWaikawaGrey",
-    "template": "\u257c[<p:draculaPalePrim>{{ now | date \"\uf5ed 02\" }}</>|<p:draculaPalePrim>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:draculaElectricBlue>{{ .PWD }}</>]: "
+    "template": "\u257c[<p:draculaPalePrim>{{ now | date \"\uf5ed 01/02\" }}</>|<p:draculaPalePrim>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:draculaElectricBlue>{{ .PWD }}</>]: "
   },
   "secondary_prompt": {
     "background": "transparent",

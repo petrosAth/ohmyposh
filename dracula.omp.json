@@ -6,9 +6,9 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:draculaVeryLightMalachiteGreen",
+          "foreground": "p:draculaGreen",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
           ],
           "properties": {
             "always_enabled": true
@@ -18,39 +18,39 @@
           "type": "exit"
         },
         {
-          "foreground": "p:draculaMauve",
+          "foreground": "p:draculaPurple",
           "style": "plain",
-          "template": "<p:draculaWaikawaGrey>[</>{{.UserName}}",
+          "template": "<p:draculaComment>[</>{{.UserName}}",
           "type": "session"
         },
         {
-          "foreground": "p:draculaNeonPink",
+          "foreground": "p:draculaPink",
           "style": "plain",
-          "template": "{{if .Root}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf0e7</><p:draculaWaikawaGrey>|</>{{else}}<p:draculaWaikawaGrey>|</>@<p:draculaWaikawaGrey>|</>{{end}}",
+          "template": "{{if .Root}}<p:draculaComment>|</><p:draculaYellow>\uf0e7</><p:draculaComment>|</>{{else}}<p:draculaComment>|</>@<p:draculaComment>|</>{{end}}",
           "type": "session"
         },
         {
-          "foreground": "p:draculaMauve",
+          "foreground": "p:draculaPurple",
           "style": "plain",
-          "template": "{{.HostName}}<p:draculaWaikawaGrey>]</>",
+          "template": "{{.HostName}}<p:draculaComment>]</>",
           "type": "session"
         },
         {
-          "foreground": "p:draculaElectricBlue",
+          "foreground": "p:draculaCyan",
           "properties": {
             "style": "full"
           },
           "style": "plain",
-          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>{{ .Path }}<p:draculaWaikawaGrey>]</>",
+          "template": "<p:draculaComment>\u257e\u257c[</>{{ .Path }}<p:draculaComment>]</>",
           "type": "path"
         },
         {
-          "foreground": "p:draculaPalePrim",
+          "foreground": "p:draculaYellow",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:draculaMacaroniAndCheese{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:draculaMacaroniAndCheese{{ end }}",
-            "{{ if gt .Ahead 0 }}p:draculaVeryLightMalachiteGreen{{ end }}",
-            "{{ if gt .Behind 0 }}p:draculaTomato{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:draculaOrange{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:draculaOrange{{ end }}",
+            "{{ if gt .Ahead 0 }}p:draculaGreen{{ end }}",
+            "{{ if gt .Behind 0 }}p:draculaRed{{ end }}"
           ],
           "properties": {
             "branch_icon": "\uf418 ",
@@ -66,13 +66,13 @@
             "revert_icon": "REVERTING "
           },
           "style": "plain",
-          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaWaikawaGrey>|</><p:draculaMacaroniAndCheese>\uf044 </>{{ if gt .Working.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaTomato> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaWaikawaGrey>|</><p:draculaVeryLightMalachiteGreen>\uf046 </>{{ if gt .Staging.Added 0 }}<p:draculaVeryLightMalachiteGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaTomato> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaMacaroniAndCheese> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaWaikawaGrey>|</><p:draculaPalePrim>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaWaikawaGrey>]</>",
+          "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange>\uf044 </>{{ if gt .Working.Added 0 }}<p:draculaGreen> +{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed> -{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange> ~{{ .Working.Modified }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen>\uf046 </>{{ if gt .Staging.Added 0 }}<p:draculaGreen> +{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed> -{{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange> ~{{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow>\uf692 {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
           "type": "git"
         },
         {
           "foreground": "#174E9C",
           "style": "plain",
-          "template": "<p:draculaWaikawaGrey>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaWaikawaGrey>]</>",
+          "template": "<p:draculaComment>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaComment>]</>",
           "type": "kubectl"
         }
       ],
@@ -83,9 +83,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:draculaVeryLightMalachiteGreen",
+          "foreground": "p:draculaGreen",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
           ],
           "properties": {
             "always_enabled": true
@@ -95,7 +95,7 @@
           "type": "exit"
         },
         {
-          "foreground": "p:draculaNeonPink",
+          "foreground": "p:draculaPink",
           "properties": {
             "alpine": "\uf300 ",
             "aosc": "\uf301 ",
@@ -123,38 +123,38 @@
             "wsl_separator": " "
           },
           "style": "plain",
-          "template": "<p:draculaWaikawaGrey>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaWaikawaGrey>|</>",
+          "template": "<p:draculaComment>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaComment>|</>",
           "type": "os"
         },
         {
-          "foreground": "p:draculaNeonPink",
+          "foreground": "p:draculaPink",
           "style": "plain",
-          "template": "\uf489 {{ .Name }}<p:draculaWaikawaGrey>]</>",
+          "template": "\uf489 {{ .Name }}<p:draculaComment>]</>",
           "type": "shell"
         },
         {
-          "foreground": "p:draculaVeryLightMalachiteGreen",
+          "foreground": "p:draculaGreen",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
           ],
           "properties": {
             "style": "austin",
             "threshold": 2000
           },
           "style": "plain",
-          "template": "\u257e\u257c<p:draculaWaikawaGrey>[</><p:draculaPalePrim>\ufa1a{{ .FormattedMs }}</><p:draculaWaikawaGrey>]</>",
+          "template": "\u257e\u257c<p:draculaComment>[</><p:draculaYellow>\ufa1a{{ .FormattedMs }}</><p:draculaComment>]</>",
           "type": "executiontime"
         },
         {
-          "foreground": "p:draculaVeryLightMalachiteGreen",
+          "foreground": "p:draculaGreen",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaTomato{{ end }}"
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
           ],
           "properties": {
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaWaikawaGrey>[</>\uf655<p:draculaWaikawaGrey>]</>{{ end }}\u276f",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaComment>[</>\uf655<p:draculaComment>]</>{{ end }}\u276f",
           "type": "exit"
         }
       ],
@@ -164,26 +164,26 @@
   "console_title_template": "{{ .Folder }}",
   "osc99": false,
   "palette": {
-    "draculaAlabaster": "#F8F8F2",
-    "draculaBlackRock": "#282A36",
-    "draculaBlueZodiac": "#44475A",
-    "draculaElectricBlue": "#8BE9FD",
-    "draculaMacaroniAndCheese": "#FFB86C",
-    "draculaMauve": "#BD93F9",
-    "draculaNeonPink": "#FF79C6",
-    "draculaPalePrim": "#F1FA8C",
-    "draculaTomato": "#FF5555",
-    "draculaVeryLightMalachiteGreen": "#50FA7B",
-    "draculaWaikawaGrey": "#6272A4"
+    "draculaBg"       : "#282A36",
+    "draculaSelection": "#44475A",
+    "draculaFg"       : "#F8F8F2",
+    "draculaComment"  : "#6272A4",
+    "draculaCyan"     : "#8BE9FD",
+    "draculaGreen"    : "#50FA7B",
+    "draculaOrange"   : "#FFB86C",
+    "draculaPink"     : "#FF79C6",
+    "draculaPurple"   : "#BD93F9",
+    "draculaRed"      : "#FF5555",
+    "draculaYellow"   : "#F1FA8C"
   },
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "p:draculaWaikawaGrey",
-    "template": "\u257c[<p:draculaPalePrim>{{ now | date \"\uf5ed 01/02\" }}</>|<p:draculaPalePrim>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:draculaElectricBlue>{{ .PWD }}</>]: "
+    "foreground": "p:draculaComment",
+    "template": "\u257c[<p:draculaYellow>{{ now | date \"\uf5ed 01/02\" }}</>|<p:draculaYellow>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:draculaCyan>{{ .PWD }}</>]: "
   },
   "secondary_prompt": {
     "background": "transparent",
-    "foreground": "p:draculaWaikawaGrey",
+    "foreground": "p:draculaComment",
     "template": " "
   },
   "version": 2

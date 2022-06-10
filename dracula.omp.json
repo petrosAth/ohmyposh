@@ -154,7 +154,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaComment>[</>\uf655<p:draculaComment>]</>{{ end }}\u276f",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaComment>[</>\uf655<p:draculaComment>]</>{{ end }}\u2771",
           "type": "exit"
         }
       ],

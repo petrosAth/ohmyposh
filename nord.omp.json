@@ -154,7 +154,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\uf655<p:nord2>]</>{{ end }}\u276f",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\uf655<p:nord2>]</>{{ end }}\u2771",
           "type": "exit"
         }
       ],

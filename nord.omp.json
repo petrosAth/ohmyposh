@@ -7,9 +7,7 @@
       "segments": [
         {
           "foreground": "p:nord14",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -34,7 +32,13 @@
           "style": "plain",
           "template": "{{.HostName}}<p:nord2>]</>",
           "type": "session"
-        },
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "p:nord7",
           "properties": {
@@ -42,8 +46,31 @@
           },
           "style": "plain",
           "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
-          "type": "path"
-        },
+          "type": "path",
+          "min_width": 115
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:nord7",
+          "properties": {
+            "style": "unique"
+          },
+          "style": "plain",
+          "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
+          "type": "path",
+          "max_width": 114
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "p:nord10",
           "foreground_templates": [
@@ -75,7 +102,13 @@
           "style": "plain",
           "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:nord14>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nord6>  {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:nord14>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
           "type": "git"
-        },
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "#174E9C",
           "style": "plain",
@@ -91,9 +124,7 @@
       "segments": [
         {
           "foreground": "p:nord14",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -141,9 +172,7 @@
         },
         {
           "foreground": "p:nord14",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"],
           "properties": {
             "style": "austin",
             "threshold": 2000
@@ -154,9 +183,7 @@
         },
         {
           "foreground": "p:nord14",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -171,16 +198,16 @@
   "console_title_template": "{{ .Folder }}",
   "osc99": false,
   "palette": {
-    "nord0" : "#2e3440",
-    "nord1" : "#3b4252",
-    "nord2" : "#434c5e",
-    "nord3" : "#4c566a",
-    "nord4" : "#d8dee9",
-    "nord5" : "#e5e9f0",
-    "nord6" : "#eceff4",
-    "nord7" : "#8fbcbb",
-    "nord8" : "#88c0d0",
-    "nord9" : "#81a1c1",
+    "nord0": "#2e3440",
+    "nord1": "#3b4252",
+    "nord2": "#434c5e",
+    "nord3": "#4c566a",
+    "nord4": "#d8dee9",
+    "nord5": "#e5e9f0",
+    "nord6": "#eceff4",
+    "nord7": "#8fbcbb",
+    "nord8": "#88c0d0",
+    "nord9": "#81a1c1",
     "nord10": "#5e81ac",
     "nord11": "#bf616a",
     "nord12": "#d08770",

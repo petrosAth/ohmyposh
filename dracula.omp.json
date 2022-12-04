@@ -7,9 +7,7 @@
       "segments": [
         {
           "foreground": "p:draculaGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -34,7 +32,13 @@
           "style": "plain",
           "template": "{{.HostName}}<p:draculaComment>]</>",
           "type": "session"
-        },
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "p:draculaCyan",
           "properties": {
@@ -42,8 +46,31 @@
           },
           "style": "plain",
           "template": "<p:draculaComment>\u257e\u257c[</>{{ .Path }}<p:draculaComment>]</>",
-          "type": "path"
-        },
+          "type": "path",
+          "min_width": 115
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:draculaCyan",
+          "properties": {
+            "style": "unique"
+          },
+          "style": "plain",
+          "template": "<p:draculaComment>\u257e\u257c[</>{{ .Path }}<p:draculaComment>]</>",
+          "type": "path",
+          "max_width": 114
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "p:draculaYellow",
           "foreground_templates": [
@@ -75,7 +102,13 @@
           "style": "plain",
           "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:draculaGreen>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:draculaFg>  {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:draculaGreen>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
           "type": "git"
-        },
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
         {
           "foreground": "#174E9C",
           "style": "plain",
@@ -91,9 +124,7 @@
       "segments": [
         {
           "foreground": "p:draculaGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -141,9 +172,7 @@
         },
         {
           "foreground": "p:draculaGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
             "style": "austin",
             "threshold": 2000
@@ -154,9 +183,7 @@
         },
         {
           "foreground": "p:draculaGreen",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
             "always_enabled": true
           },
@@ -171,17 +198,17 @@
   "console_title_template": "{{ .Folder }}",
   "osc99": false,
   "palette": {
-    "draculaBg"       : "#282A36",
+    "draculaBg": "#282A36",
     "draculaSelection": "#44475A",
-    "draculaFg"       : "#F8F8F2",
-    "draculaComment"  : "#6272A4",
-    "draculaCyan"     : "#8BE9FD",
-    "draculaGreen"    : "#50FA7B",
-    "draculaOrange"   : "#FFB86C",
-    "draculaPink"     : "#FF79C6",
-    "draculaPurple"   : "#BD93F9",
-    "draculaRed"      : "#FF5555",
-    "draculaYellow"   : "#F1FA8C"
+    "draculaFg": "#F8F8F2",
+    "draculaComment": "#6272A4",
+    "draculaCyan": "#8BE9FD",
+    "draculaGreen": "#50FA7B",
+    "draculaOrange": "#FFB86C",
+    "draculaPink": "#FF79C6",
+    "draculaPurple": "#BD93F9",
+    "draculaRed": "#FF5555",
+    "draculaYellow": "#F1FA8C"
   },
   "transient_prompt": {
     "background": "transparent",

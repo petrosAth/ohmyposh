@@ -42,28 +42,11 @@
         {
           "foreground": "p:nord7",
           "properties": {
-            "style": "full"
+            "style": "letter"
           },
           "style": "plain",
           "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
-          "type": "path",
-          "min_width": 115
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "segments": [
-        {
-          "foreground": "p:nord7",
-          "properties": {
-            "style": "unique"
-          },
-          "style": "plain",
-          "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
-          "type": "path",
-          "max_width": 114
+          "type": "path"
         }
       ],
       "type": "prompt"

@@ -80,10 +80,10 @@
             "merge_icon": " ",
             "no_commits_icon": "",
             "github_icon": " ",
-            "git_icon": " "
+            "git_icon": "󰊢 "
           },
           "style": "plain",
-          "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:nord14>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nord6>  {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:nord14>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
+          "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:nord14>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nord6> 󰊠 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:nord14>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
           "type": "git"
         }
       ],
@@ -161,7 +161,7 @@
             "threshold": 2000
           },
           "style": "plain",
-          "template": "\u257e\u257c<p:nord2>[</><p:nord12>\ufa1a{{ .FormattedMs }}</><p:nord2>]</>",
+          "template": "\u257e\u257c<p:nord2>[</><p:nord12>󰔛 {{ .FormattedMs }}</><p:nord2>]</>",
           "type": "executiontime"
         },
         {
@@ -171,7 +171,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\uf655<p:nord2>]</>{{ end }}\u2771",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>󰖭<p:nord2>]</>{{ end }}\u2771",
           "type": "exit"
         }
       ],
@@ -201,7 +201,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:nord2",
-    "template": "\u257c[<p:nord12>{{ now | date \"\uf5ed 01/02\" }}</>|<p:nord12>{{ now | date \"\uf64f 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: "
+    "template": "\u257c[<p:nord12>{{ now | date \" 01/02\" }}</>|<p:nord12>{{ now | date \" 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: "
   },
   "secondary_prompt": {
     "background": "transparent",

@@ -13,7 +13,7 @@
           },
           "style": "plain",
           "template": "\u252e",
-          "type": "exit"
+          "type": "status"
         },
         {
           "foreground": "p:nord9",
@@ -113,7 +113,7 @@
           },
           "style": "plain",
           "template": "\u2515",
-          "type": "exit"
+          "type": "status"
         },
         {
           "foreground": "p:nord8",
@@ -172,7 +172,7 @@
           },
           "style": "plain",
           "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>󰖭<p:nord2>]</>{{ end }}\u2771",
-          "type": "exit"
+          "type": "status"
         }
       ],
       "type": "prompt"

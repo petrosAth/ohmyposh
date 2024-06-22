@@ -1,1 +1,6 @@
 .nvim/spell/*
+.nvim/spell/*.spl
+.nvim/styles/*
+!.nvim/styles/Vocab/
+.vscode
+Thumbs.db

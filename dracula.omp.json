@@ -68,8 +68,8 @@
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true,
             "branch_icon": " ",
-            "branch_ahead_icon": "",
-            "branch_behind_icon": "",
+            "branch_ahead_icon": "󰁝",
+            "branch_behind_icon": "󰁅",
             "branch_max_length": 30,
             "truncate_symbol": "",
             "commit_icon": " ",
@@ -83,7 +83,7 @@
             "git_icon": "󰊢 "
           },
           "style": "plain",
-          "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:draculaGreen>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:draculaFg> 󰊠 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:draculaGreen>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
+          "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:draculaGreen>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:draculaFg> 󰊠 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:draculaGreen>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
           "type": "git"
         }
       ],

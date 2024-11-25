@@ -24,7 +24,7 @@
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:nord12>{{ now | date \"\uf455 01/02\" }}</>|<p:nord12>{{ now | date \"\uf43a 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: ",
+    "template": "\u257c[<p:nord12>{{ now | date \"\ueab0 01/02\" }}</>|<p:nord12>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: ",
     "foreground": "p:nord2",
     "background": "transparent"
   },
@@ -42,9 +42,7 @@
           "template": "\u252e",
           "foreground": "p:nord14",
           "type": "status",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
           "style": "plain",
@@ -72,10 +70,13 @@
       "segments": [
         {
           "properties": {
-            "style": "letter"
+            "folder_separator_icon": " \ueab6 ",
+            "folder_icon": "...",
+            "style": "agnoster_short",
+            "max_depth": 4
           },
           "style": "plain",
-          "template": "<p:nord2>\u257e\u257c[</>{{ .Path }}<p:nord2>]</>",
+          "template": "<p:nord2>\u257e\u257c[</>  {{ .Path }}<p:nord2>]</>",
           "foreground": "p:nord7",
           "type": "path"
         }
@@ -143,9 +144,7 @@
           "template": "\u2515",
           "foreground": "p:nord14",
           "type": "status",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
           "properties": {
@@ -194,9 +193,7 @@
           "template": "\u257e\u257c<p:nord2>[</><p:nord12>\udb81\udd1b {{ .FormattedMs }}</><p:nord2>]</>",
           "foreground": "p:nord14",
           "type": "executiontime",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
           "properties": {
@@ -206,9 +203,7 @@
           "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\udb81\uddad<p:nord2>]</>{{ end }}❱",
           "foreground": "p:nord14",
           "type": "status",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:nord11{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         }
       ],
       "newline": true

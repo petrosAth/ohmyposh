@@ -38,9 +38,7 @@
           "foreground": "p:draculaGreen",
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"]
         },
         {
           "properties": {
@@ -77,10 +75,12 @@
       "segments": [
         {
           "properties": {
-            "cache_duration": "none",
-            "style": "letter"
+            "folder_separator_icon": " \ueab6 ",
+            "folder_icon": "...",
+            "style": "agnoster_short",
+            "max_depth": 4
           },
-          "template": "<p:draculaComment>\u257e\u257c[</>{{ .Path }}<p:draculaComment>]</>",
+          "template": "<p:draculaComment>\u257e\u257c[</>  {{ .Path }}<p:draculaComment>]</>",
           "foreground": "p:draculaCyan",
           "type": "path",
           "style": "plain"
@@ -154,9 +154,7 @@
           "foreground": "p:draculaGreen",
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"]
         },
         {
           "properties": {
@@ -210,9 +208,7 @@
           "foreground": "p:draculaGreen",
           "type": "executiontime",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"]
         },
         {
           "properties": {
@@ -223,9 +219,7 @@
           "foreground": "p:draculaGreen",
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"]
         }
       ],
       "newline": true

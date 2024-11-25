@@ -132,21 +132,6 @@
       "segments": [
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "template": "<p:draculaComment>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaComment>]</>",
-          "foreground": "#174E9C",
-          "type": "kubectl",
-          "style": "plain"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
@@ -180,6 +165,7 @@
             "sabayon": "\uf317 ",
             "slackware": "\uf318 ",
             "ubuntu": "\uf31b ",
+            "endeavour": "\uf322 ",
             "windows": "\uf871 ",
             "wsl": "WSL",
             "wsl_separator": " "
@@ -193,7 +179,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\uf489 {{ .Name }}<p:draculaComment>]</>",
+          "template": "\uea85 {{ .Name }}<p:draculaComment>]</>",
           "foreground": "p:draculaPink",
           "type": "shell",
           "style": "plain"

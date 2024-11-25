@@ -36,31 +36,41 @@
       "segments": [
         {
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "\u252e",
           "foreground": "p:nord14",
           "type": "status",
+          "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "<p:nord2>[</>{{.UserName}}",
           "foreground": "p:nord9",
-          "type": "session"
+          "type": "session",
+          "style": "plain"
         },
         {
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{if .Root}}<p:nord2>|</><p:nord13>\uf0e7</><p:nord2>|</>{{else}}<p:nord2>|</>@<p:nord2>|</>{{end}}",
           "foreground": "p:nord8",
-          "type": "session"
+          "type": "session",
+          "style": "plain"
         },
         {
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{.HostName}}<p:nord2>]</>",
           "foreground": "p:nord9",
-          "type": "session"
+          "type": "session",
+          "style": "plain"
         }
       ]
     },
@@ -75,10 +85,10 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "style": "plain",
           "template": "<p:nord2>\u257e\u257c[</>  {{ .Path }}<p:nord2>]</>",
           "foreground": "p:nord7",
-          "type": "path"
+          "type": "path",
+          "style": "plain"
         }
       ]
     },
@@ -107,10 +117,10 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "style": "plain",
           "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13>\uebb5 </><p:nord2>\ueab6</>{{ if gt .Working.Added 0 }}<p:nord14> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nord6> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14>\ueba4 </><p:nord2>\ueab6</>{{ if gt .Staging.Added 0 }}<p:nord14> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
           "foreground": "p:nord10",
           "type": "git",
+          "style": "plain",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nord13{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nord13{{ end }}",
@@ -125,25 +135,14 @@
       "alignment": "left",
       "segments": [
         {
-          "style": "plain",
-          "template": "<p:nord2>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:nord2>]</>",
-          "foreground": "#174E9C",
-          "type": "kubectl"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "\u2515",
           "foreground": "p:nord14",
           "type": "status",
+          "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
@@ -169,40 +168,46 @@
             "sabayon": "\uf317 ",
             "slackware": "\uf318 ",
             "ubuntu": "\uf31b ",
+            "endeavour": "\uf322 ",
             "windows": "\uf871 ",
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "style": "plain",
           "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nord2>|</>",
           "foreground": "p:nord8",
-          "type": "os"
-        },
-        {
-          "style": "plain",
-          "template": "\uf489 {{ .Name }}<p:nord2>]</>",
-          "foreground": "p:nord8",
-          "type": "shell"
+          "type": "os",
+          "style": "plain"
         },
         {
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\uea85 {{ .Name }}<p:nord2>]</>",
+          "foreground": "p:nord8",
+          "type": "shell",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "austin",
             "threshold": 2000
           },
-          "style": "plain",
           "template": "\u257e\u257c<p:nord2>[</><p:nord12>\udb81\udd1b {{ .FormattedMs }}</><p:nord2>]</>",
           "foreground": "p:nord14",
           "type": "executiontime",
+          "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         },
         {
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\udb81\uddad<p:nord2>]</>{{ end }}❱",
           "foreground": "p:nord14",
           "type": "status",
+          "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
         }
       ],

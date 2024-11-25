@@ -1,126 +1,169 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "final_space": true,
+  "palette": {
+    "draculaBg": "#282A36",
+    "draculaComment": "#6272A4",
+    "draculaCyan": "#8BE9FD",
+    "draculaFg": "#F8F8F2",
+    "draculaGreen": "#50FA7B",
+    "draculaOrange": "#FFB86C",
+    "draculaPink": "#FF79C6",
+    "draculaPurple": "#BD93F9",
+    "draculaRed": "#FF5555",
+    "draculaSelection": "#44475A",
+    "draculaYellow": "#F1FA8C"
+  },
+  "secondary_prompt": {
+    "template": " ",
+    "foreground": "p:draculaComment",
+    "background": "transparent"
+  },
+  "transient_prompt": {
+    "template": "\u257c[<p:draculaYellow>{{ now | date \"\uf455 01/02\" }}</>|<p:draculaYellow>{{ now | date \"\uf43a 15:04:05\" }}</>]\u257e\u257c[<p:draculaCyan>{{ .PWD }}</>]: ",
+    "foreground": "p:draculaComment",
+    "background": "transparent"
+  },
+  "console_title_template": "{{ .Folder }}",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:draculaGreen",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "\u252e",
-          "type": "status"
+          "foreground": "p:draculaGreen",
+          "type": "status",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
+          ]
         },
         {
-          "foreground": "p:draculaPurple",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "<p:draculaComment>[</>{{.UserName}}",
-          "type": "session"
-        },
-        {
-          "foreground": "p:draculaPink",
-          "style": "plain",
-          "template": "{{if .Root}}<p:draculaComment>|</><p:draculaYellow>\uf0e7</><p:draculaComment>|</>{{else}}<p:draculaComment>|</>@<p:draculaComment>|</>{{end}}",
-          "type": "session"
-        },
-        {
           "foreground": "p:draculaPurple",
-          "style": "plain",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{if .Root}}<p:draculaComment>|</><p:draculaYellow>\uf0e7</><p:draculaComment>|</>{{else}}<p:draculaComment>|</>@<p:draculaComment>|</>{{end}}",
+          "foreground": "p:draculaPink",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{.HostName}}<p:draculaComment>]</>",
-          "type": "session"
+          "foreground": "p:draculaPurple",
+          "type": "session",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:draculaCyan",
           "properties": {
+            "cache_duration": "none",
             "style": "letter"
           },
-          "style": "plain",
           "template": "<p:draculaComment>\u257e\u257c[</>{{ .Path }}<p:draculaComment>]</>",
-          "type": "path"
+          "foreground": "p:draculaCyan",
+          "type": "path",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "branch_ahead_icon": "\udb80\udc5d",
+            "branch_behind_icon": "\udb80\udc45",
+            "branch_icon": "\uea68 ",
+            "branch_max_length": 30,
+            "cache_duration": "none",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\ueafc ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true,
+            "git_icon": "\udb80\udea2 ",
+            "github_icon": "\uea84 ",
+            "merge_icon": "\ueafe ",
+            "no_commits_icon": "\ueacc",
+            "rebase_icon": "\ueafd ",
+            "revert_icon": "\ueae2 ",
+            "tag_icon": "\uea66 ",
+            "truncate_symbol": "\ueab6"
+          },
+          "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange>\uebb5 </><p:nord2>\ueab6</>{{ if gt .Working.Added 0 }}<p:draculaGreen> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:draculaFg> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen>\ueba4 </><p:nord2>\ueab6</>{{ if gt .Staging.Added 0 }}<p:draculaGreen> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
           "foreground": "p:draculaYellow",
+          "type": "git",
+          "style": "plain",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:draculaOrange{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:draculaOrange{{ end }}",
             "{{ if gt .Ahead 0 }}p:draculaGreen{{ end }}",
             "{{ if gt .Behind 0 }}p:draculaRed{{ end }}"
-          ],
-          "properties": {
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true,
-            "fetch_worktree_count": true,
-            "branch_icon": " ",
-            "branch_ahead_icon": "󰁝",
-            "branch_behind_icon": "󰁅",
-            "branch_max_length": 30,
-            "truncate_symbol": "",
-            "commit_icon": " ",
-            "tag_icon": " ",
-            "rebase_icon": " ",
-            "cherry_pick_icon": " ",
-            "revert_icon": " ",
-            "merge_icon": " ",
-            "no_commits_icon": "",
-            "github_icon": " ",
-            "git_icon": "󰊢 "
-          },
-          "style": "plain",
-          "template": "<p:draculaComment>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:draculaComment>|</><p:draculaOrange> </><p:nord2></>{{ if gt .Working.Added 0 }}<p:draculaGreen>  {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:draculaRed>  {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:draculaOrange>  {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:draculaFg> 󰊠 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:draculaComment>|</><p:draculaGreen> </><p:nord2></>{{ if gt .Staging.Added 0 }}<p:draculaGreen>  {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:draculaRed>  {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:draculaOrange>  {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:draculaComment>|</><p:draculaYellow> {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:draculaComment>|</><p:draculaYellow>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:draculaComment>]</>",
-          "type": "git"
+          ]
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#174E9C",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "<p:draculaComment>\u257e\u257c[</>\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<p:draculaComment>]</>",
-          "type": "kubectl"
+          "foreground": "#174E9C",
+          "type": "kubectl",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "p:draculaGreen",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "style": "plain",
           "template": "\u2515",
-          "type": "status"
+          "foreground": "p:draculaGreen",
+          "type": "status",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
+          ]
         },
         {
-          "foreground": "p:draculaPink",
           "properties": {
             "alpine": "\uf300 ",
             "aosc": "\uf301 ",
             "arch": "\uf303 ",
+            "cache_duration": "none",
             "centos": "\uf304 ",
             "coreos": "\uf305 ",
             "debian": "\uf306 ",
@@ -143,65 +186,51 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "style": "plain",
           "template": "<p:draculaComment>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:draculaComment>|</>",
-          "type": "os"
-        },
-        {
           "foreground": "p:draculaPink",
-          "style": "plain",
-          "template": "\uf489 {{ .Name }}<p:draculaComment>]</>",
-          "type": "shell"
+          "type": "os",
+          "style": "plain"
         },
         {
-          "foreground": "p:draculaGreen",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\uf489 {{ .Name }}<p:draculaComment>]</>",
+          "foreground": "p:draculaPink",
+          "type": "shell",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "austin",
             "threshold": 2000
           },
+          "template": "\u257e\u257c<p:draculaComment>[</><p:draculaYellow>\udb81\udd1b {{ .FormattedMs }}</><p:draculaComment>]</>",
+          "foreground": "p:draculaGreen",
+          "type": "executiontime",
           "style": "plain",
-          "template": "\u257e\u257c<p:draculaComment>[</><p:draculaYellow>󰔛 {{ .FormattedMs }}</><p:draculaComment>]</>",
-          "type": "executiontime"
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
+          ]
         },
         {
-          "foreground": "p:draculaGreen",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:draculaRed{{ end }}"],
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaComment>[</>\udb81\uddad<p:draculaComment>]</>{{ end }}❱",
+          "foreground": "p:draculaGreen",
+          "type": "status",
           "style": "plain",
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:draculaComment>[</>󰖭<p:draculaComment>]</>{{ end }}\u2771",
-          "type": "status"
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:draculaRed{{ end }}"
+          ]
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "console_title_template": "{{ .Folder }}",
-  "osc99": false,
-  "palette": {
-    "draculaBg": "#282A36",
-    "draculaSelection": "#44475A",
-    "draculaFg": "#F8F8F2",
-    "draculaComment": "#6272A4",
-    "draculaCyan": "#8BE9FD",
-    "draculaGreen": "#50FA7B",
-    "draculaOrange": "#FFB86C",
-    "draculaPink": "#FF79C6",
-    "draculaPurple": "#BD93F9",
-    "draculaRed": "#FF5555",
-    "draculaYellow": "#F1FA8C"
-  },
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "p:draculaComment",
-    "template": "\u257c[<p:draculaYellow>{{ now | date \" 01/02\" }}</>|<p:draculaYellow>{{ now | date \" 15:04:05\" }}</>]\u257e\u257c[<p:draculaCyan>{{ .PWD }}</>]: "
-  },
-  "secondary_prompt": {
-    "background": "transparent",
-    "foreground": "p:draculaComment",
-    "template": " "
-  },
-  "version": 2
+  "version": 3,
+  "final_space": true
 }

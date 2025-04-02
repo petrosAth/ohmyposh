@@ -1,0 +1,17 @@
+return {
+	grv_dark0 = "#282828",
+	grv_dark1 = "#3c3836",
+	grv_dark2 = "#504945",
+	grv_dark3 = "#665c54",
+	grv_light0 = "#ebdbb2",
+	grv_light1 = "#fbf1c7",
+	grv_light2 = "#f9f5d7",
+	grv_red = "#cc241d",
+	grv_orange = "#d65d0e",
+	grv_yellow = "#d79921",
+	grv_green = "#98971a",
+	grv_cyan = "#689d6a",
+	grv_blue = "#458588",
+	grv_violet = "#6662b2",
+	grv_magenta = "#b16286",
+}

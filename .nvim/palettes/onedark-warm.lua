@@ -1,0 +1,18 @@
+return {
+	odw_dark0 = "#191a1c",
+	odw_dark1 = "#2c2d30",
+	odw_dark2 = "#35373b",
+	odw_dark3 = "#3e4045",
+	odw_dark4 = "#404247",
+	odw_light0 = "#646568",
+	odw_light1 = "#8b8d91",
+	odw_light2 = "#b1b4b9",
+	odw_red = "#e16d77",
+	odw_orange = "#c99a6e",
+	odw_yellow = "#dfbe81",
+	odw_green = "#99bc80",
+	odw_cyan = "#5fafb9",
+	odw_blue = "#68aee8",
+	odw_violet = "#c27fd7",
+	odw_magenta = "#d6749a",
+}

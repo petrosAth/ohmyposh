@@ -24,7 +24,7 @@
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:nord12>{{ now | date \"\ueab0 01/02\" }}</>|<p:nord12>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]: ",
+    "template": "\u257c[<p:nord12>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:nord12>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]❱ ",
     "foreground": "p:nord2",
     "background": "transparent"
   },
@@ -173,7 +173,7 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}<p:nord2>|</>",
+          "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:nord8",
           "type": "os",
           "style": "plain"
@@ -182,10 +182,40 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\uea85 {{ .Name }}<p:nord2>]</>",
+          "template": "<p:nord2>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:nord8",
           "type": "shell",
           "style": "plain"
+        },
+        {
+          "style": "plain",
+          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "foreground": "#FFD43B",
+          "type": "python"
+        },
+        {
+          "style": "plain",
+          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "foreground": "#339933",
+          "type": "node"
+        },
+        {
+          "style": "plain",
+          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "foreground": "#c3002f",
+          "type": "angular"
+        },
+        {
+          "style": "plain",
+          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "foreground": "#149eca",
+          "type": "react"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:nord2",
+          "template": "]"
         },
         {
           "properties": {

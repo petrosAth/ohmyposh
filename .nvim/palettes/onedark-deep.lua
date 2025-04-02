@@ -1,0 +1,18 @@
+return {
+	oddp_dark0 = "#0c0e15",
+	oddp_dark1 = "#1a212e",
+	oddp_dark2 = "#21283b",
+	oddp_dark3 = "#283347",
+	oddp_dark4 = "#2a324a",
+	oddp_light0 = "#455574",
+	oddp_light1 = "#6c7d9c",
+	oddp_light2 = "#93a4c3",
+	oddp_red = "#f65866",
+	oddp_orange = "#dd9046",
+	oddp_yellow = "#efbd5d",
+	oddp_green = "#8bcd5b",
+	oddp_cyan = "#34bfd0",
+	oddp_blue = "#41a7fc",
+	oddp_violet = "#c75ae8",
+	oddp_magenta = "#e55995",
+}

@@ -1,0 +1,16 @@
+return {
+	seld_dark0 = "#103c48",
+	seld_dark1 = "#184956",
+	seld_dark2 = "#2d5b69",
+	seld_light0 = "#72898f",
+	seld_light1 = "#adbcbc",
+	seld_light2 = "#cad8d9",
+	seld_red = "#fa5750",
+	seld_orange = "#ed8649",
+	seld_yellow = "#dbb32d",
+	seld_green = "#75b938",
+	seld_cyan = "#41c7b9",
+	seld_blue = "#4695f7",
+	seld_violet = "#af88eb",
+	seld_magenta = "#f275be",
+}

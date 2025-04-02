@@ -1,0 +1,18 @@
+return {
+	oddr_dark0 = "#0e1013",
+	oddr_dark1 = "#1f2329",
+	oddr_dark2 = "#282c34",
+	oddr_dark3 = "#30363f",
+	oddr_dark4 = "#323641",
+	oddr_light0 = "#535965",
+	oddr_light1 = "#7a818e",
+	oddr_light2 = "#a0a8b7",
+	oddr_red = "#e55561",
+	oddr_orange = "#cc9057",
+	oddr_yellow = "#e2b86b",
+	oddr_green = "#8ebd6b",
+	oddr_cyan = "#48b0bd",
+	oddr_blue = "#4fa6ed",
+	oddr_violet = "#bf68d9",
+	oddr_magenta = "#d75c8d",
+}

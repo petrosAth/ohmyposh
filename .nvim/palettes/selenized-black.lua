@@ -1,0 +1,16 @@
+return {
+	selb_dark0 = "#181818",
+	selb_dark1 = "#252525",
+	selb_dark2 = "#3b3b3b",
+	selb_light0 = "#777777",
+	selb_light1 = "#b9b9b9",
+	selb_light2 = "#dedede",
+	selb_red = "#ed4a46",
+	selb_orange = "#e67f43",
+	selb_yellow = "#dbb32d",
+	selb_green = "#70b433",
+	selb_cyan = "#3fc5b7",
+	selb_blue = "#368aeb",
+	selb_violet = "#a580e2",
+	selb_magenta = "#eb6eb7",
+}

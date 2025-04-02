@@ -1,0 +1,18 @@
+return {
+	odd_dark0 = "#181a1f",
+	odd_dark1 = "#282c34",
+	odd_dark2 = "#31353f",
+	odd_dark3 = "#393f4a",
+	odd_dark4 = "#3b3f4c",
+	odd_light0 = "#5c6370",
+	odd_light1 = "#848b98",
+	odd_light2 = "#abb2bf",
+	odd_red = "#e86671",
+	odd_orange = "#d19a66",
+	odd_yellow = "#e5c07b",
+	odd_green = "#98c379",
+	odd_cyan = "#56b6c2",
+	odd_blue = "#61afef",
+	odd_violet = "#c678dd",
+	odd_magenta = "#dc6d98",
+}

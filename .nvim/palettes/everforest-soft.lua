@@ -1,0 +1,18 @@
+return {
+	efs_dark0 = "#293136",
+	efs_dark1 = "#333c43",
+	efs_dark2 = "#3a464c",
+	efs_dark3 = "#434f55",
+	efs_dark4 = "#4d5960",
+	efs_light0 = "#5d6b66",
+	efs_light1 = "#9da9a0",
+	efs_light2 = "#d3c6aa",
+	efs_red = "#e67e80",
+	efs_orange = "#e69875",
+	efs_yellow = "#dbbc7f",
+	efs_green = "#a7c080",
+	efs_cyan = "#83c092",
+	efs_blue = "#7fbbb3",
+	efs_violet = "#7f99b3",
+	efs_magenta = "#d699b6",
+}

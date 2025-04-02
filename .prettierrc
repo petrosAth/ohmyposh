@@ -1,11 +1,9 @@
 {
-  "printWidth": 120,
   "singleQuote": true,
   "overrides": [
     {
       "files": "*.md",
       "options": {
-        "printWidth": 80,
         "proseWrap": "always"
       }
     }

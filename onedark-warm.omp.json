@@ -189,7 +189,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:odw_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:odw_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:odw_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

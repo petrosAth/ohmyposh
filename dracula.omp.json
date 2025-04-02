@@ -186,7 +186,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:draculaComment> \ueab6 </> {{ .Full }}",
+          "template": "<p:draculaComment> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:draculaComment>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

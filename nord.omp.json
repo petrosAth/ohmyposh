@@ -189,7 +189,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "template": "<p:nord2> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:nord2>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

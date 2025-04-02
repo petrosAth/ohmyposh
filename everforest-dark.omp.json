@@ -189,7 +189,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:efd_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:efd_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:efd_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

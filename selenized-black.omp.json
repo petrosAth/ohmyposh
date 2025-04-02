@@ -187,7 +187,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:selb_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

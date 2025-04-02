@@ -191,7 +191,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:solo_dark3> \ueab6 </> {{ .Full }}",
+          "template": "<p:solo_dark3> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:solo_dark3>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

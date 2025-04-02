@@ -189,7 +189,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:oddp_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },

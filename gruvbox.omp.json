@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "grv_dark0": "#282828",
-    "grv_dark1": "#3c3836",
-    "grv_dark2": "#504945",
-    "grv_dark3": "#665c54",
+    "grv_dark1": "#32302f",
+    "grv_dark2": "#3c3836",
+    "grv_dark3": "#504945",
     "grv_light0": "#ebdbb2",
     "grv_light1": "#fbf1c7",
     "grv_light2": "#f9f5d7",

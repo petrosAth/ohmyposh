@@ -5,10 +5,12 @@
     "oddp_dark1": "#1a212e",
     "oddp_dark2": "#21283b",
     "oddp_dark3": "#283347",
-    "oddp_dark4": "#2a324a",
-    "oddp_light0": "#455574",
-    "oddp_light1": "#6c7d9c",
+    "oddp_dark4": "#3a435c",
+    "oddp_light0": "#c4ccde",
+    "oddp_light1": "#b4bfd5",
     "oddp_light2": "#93a4c3",
+    "oddp_light3": "#7081a0",
+    "oddp_light4": "#455574",
     "oddp_red": "#f65866",
     "oddp_orange": "#dd9046",
     "oddp_yellow": "#efbd5d",
@@ -20,12 +22,12 @@
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:oddp_light0",
+    "foreground": "p:oddp_light4",
     "background": "transparent"
   },
   "transient_prompt": {
     "template": "\u257c[<p:oddp_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:oddp_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:oddp_magenta>{{ .PWD }}</>]❱ ",
-    "foreground": "p:oddp_light0",
+    "foreground": "p:oddp_light4",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -49,7 +51,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:oddp_light0>[</>{{.UserName}}",
+          "template": "<p:oddp_light4>[</>{{.UserName}}",
           "foreground": "p:oddp_blue",
           "type": "session",
           "style": "plain"
@@ -58,7 +60,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:oddp_light0>|</><p:oddp_yellow>\uf0e7</><p:oddp_light0>|</>{{else}}<p:oddp_light0>|</>@<p:oddp_light0>|</>{{end}}",
+          "template": "{{if .Root}}<p:oddp_light4>|</><p:oddp_yellow>\uf0e7</><p:oddp_light4>|</>{{else}}<p:oddp_light4>|</>@<p:oddp_light4>|</>{{end}}",
           "foreground": "p:oddp_cyan",
           "type": "session",
           "style": "plain"
@@ -67,7 +69,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:oddp_light0>]</>",
+          "template": "{{.HostName}}<p:oddp_light4>]</>",
           "foreground": "p:oddp_blue",
           "type": "session",
           "style": "plain"
@@ -80,12 +82,12 @@
       "segments": [
         {
           "properties": {
-            "folder_separator_icon": " <p:oddp_light0>\ueab6</> ",
+            "folder_separator_icon": " <p:oddp_light4>\ueab6</> ",
             "folder_icon": "...",
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:oddp_light0>\u257e\u257c[</>  {{ .Path }}<p:oddp_light0>]</>",
+          "template": "<p:oddp_light4>\u257e\u257c[</>  {{ .Path }}<p:oddp_light4>]</>",
           "foreground": "p:oddp_magenta",
           "type": "path",
           "style": "plain"
@@ -117,7 +119,7 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:oddp_light0>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:oddp_light0>|</><p:oddp_yellow>\uebb5 </><p:oddp_light0>\ueab6</>{{ if gt .Working.Added 0 }}<p:oddp_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:oddp_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:oddp_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:oddp_light2> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:oddp_light0>|</><p:oddp_green>\ueba4 </><p:oddp_light0>\ueab6</>{{ if gt .Staging.Added 0 }}<p:oddp_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:oddp_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:oddp_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:oddp_light0>|</><p:oddp_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:oddp_light0>|</><p:oddp_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:oddp_light0>]</>",
+          "template": "<p:oddp_light4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:oddp_light4>|</><p:oddp_yellow>\uebb5 </><p:oddp_light4>\ueab6</>{{ if gt .Working.Added 0 }}<p:oddp_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:oddp_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:oddp_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:oddp_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:oddp_light4>|</><p:oddp_green>\ueba4 </><p:oddp_light4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:oddp_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:oddp_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:oddp_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:oddp_light4>|</><p:oddp_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:oddp_light4>|</><p:oddp_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:oddp_light4>]</>",
           "foreground": "p:oddp_violet",
           "type": "git",
           "style": "plain",
@@ -173,7 +175,7 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:oddp_light0>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "template": "<p:oddp_light4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:oddp_cyan",
           "type": "os",
           "style": "plain"
@@ -182,39 +184,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:oddp_light0>\ueab6 </>\uea85 {{ .Name }}",
+          "template": "<p:oddp_light4>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:oddp_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:oddp_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:oddp_light4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:oddp_light4>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:oddp_light4> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:oddp_light4> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:oddp_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:oddp_light4> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:oddp_light0",
+          "foreground": "p:oddp_light4",
           "template": "]"
         },
         {
@@ -223,7 +225,7 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:oddp_light0>[</><p:oddp_orange>\udb81\udd1b {{ .FormattedMs }}</><p:oddp_light0>]</>",
+          "template": "\u257e\u257c<p:oddp_light4>[</><p:oddp_orange>\udb81\udd1b {{ .FormattedMs }}</><p:oddp_light4>]</>",
           "foreground": "p:oddp_green",
           "type": "executiontime",
           "style": "plain",
@@ -234,7 +236,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:oddp_light0>[</>\udb81\uddad<p:oddp_light0>]</>{{ end }}❱",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:oddp_light4>[</>\udb81\uddad<p:oddp_light4>]</>{{ end }}❱",
           "foreground": "p:oddp_green",
           "type": "status",
           "style": "plain",

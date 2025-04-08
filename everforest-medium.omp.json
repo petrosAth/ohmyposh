@@ -5,10 +5,12 @@
     "efm_dark1": "#2d353b",
     "efm_dark2": "#343f44",
     "efm_dark3": "#3d484d",
-    "efm_dark4": "#475258",
-    "efm_light0": "#56635f",
-    "efm_light1": "#9da9a0",
+    "efm_dark4": "#55615d",
+    "efm_light0": "#f4f0e8",
+    "efm_light1": "#eae1cf",
     "efm_light2": "#d3c6aa",
+    "efm_light3": "#9da9a0",
+    "efm_light4": "#727f78",
     "efm_red": "#e67e80",
     "efm_orange": "#e69875",
     "efm_yellow": "#dbbc7f",
@@ -20,12 +22,12 @@
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:efm_dark4",
+    "foreground": "p:efm_dark3",
     "background": "transparent"
   },
   "transient_prompt": {
     "template": "\u257c[<p:efm_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:efm_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:efm_magenta>{{ .PWD }}</>]❱ ",
-    "foreground": "p:efm_dark4",
+    "foreground": "p:efm_dark3",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -49,7 +51,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:efm_dark4>[</>{{.UserName}}",
+          "template": "<p:efm_dark3>[</>{{.UserName}}",
           "foreground": "p:efm_blue",
           "type": "session",
           "style": "plain"
@@ -58,7 +60,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:efm_dark4>|</><p:efm_yellow>\uf0e7</><p:efm_dark4>|</>{{else}}<p:efm_dark4>|</>@<p:efm_dark4>|</>{{end}}",
+          "template": "{{if .Root}}<p:efm_dark3>|</><p:efm_yellow>\uf0e7</><p:efm_dark3>|</>{{else}}<p:efm_dark3>|</>@<p:efm_dark3>|</>{{end}}",
           "foreground": "p:efm_cyan",
           "type": "session",
           "style": "plain"
@@ -67,7 +69,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:efm_dark4>]</>",
+          "template": "{{.HostName}}<p:efm_dark3>]</>",
           "foreground": "p:efm_blue",
           "type": "session",
           "style": "plain"
@@ -85,7 +87,7 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:efm_dark4>\u257e\u257c[</>  {{ .Path }}<p:efm_dark4>]</>",
+          "template": "<p:efm_dark3>\u257e\u257c[</>  {{ .Path }}<p:efm_dark3>]</>",
           "foreground": "p:efm_magenta",
           "type": "path",
           "style": "plain"
@@ -117,7 +119,7 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:efm_dark4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:efm_dark4>|</><p:efm_yellow>\uebb5 </><p:efm_dark4>\ueab6</>{{ if gt .Working.Added 0 }}<p:efm_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:efm_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:efm_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:efm_light2> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:efm_dark4>|</><p:efm_green>\ueba4 </><p:efm_dark4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:efm_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:efm_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:efm_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:efm_dark4>|</><p:efm_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:efm_dark4>|</><p:efm_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:efm_dark4>]</>",
+          "template": "<p:efm_dark3>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:efm_dark3>|</><p:efm_yellow>\uebb5 </><p:efm_dark3>\ueab6</>{{ if gt .Working.Added 0 }}<p:efm_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:efm_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:efm_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:efm_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:efm_dark3>|</><p:efm_green>\ueba4 </><p:efm_dark3>\ueab6</>{{ if gt .Staging.Added 0 }}<p:efm_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:efm_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:efm_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:efm_dark3>|</><p:efm_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:efm_dark3>|</><p:efm_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:efm_dark3>]</>",
           "foreground": "p:efm_violet",
           "type": "git",
           "style": "plain",
@@ -173,7 +175,7 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:efm_dark4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "template": "<p:efm_dark3>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:efm_cyan",
           "type": "os",
           "style": "plain"
@@ -182,39 +184,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:efm_dark4>\ueab6 </>\uea85 {{ .Name }}",
+          "template": "<p:efm_dark3>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:efm_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:efm_dark4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:efm_dark4>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:efm_dark3> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:efm_dark3>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:efm_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:efm_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:efm_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:efm_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:efm_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:efm_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:efm_dark4",
+          "foreground": "p:efm_dark3",
           "template": "]"
         },
         {
@@ -223,7 +225,7 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:efm_dark4>[</><p:efm_orange>\udb81\udd1b {{ .FormattedMs }}</><p:efm_dark4>]</>",
+          "template": "\u257e\u257c<p:efm_dark3>[</><p:efm_orange>\udb81\udd1b {{ .FormattedMs }}</><p:efm_dark3>]</>",
           "foreground": "p:efm_green",
           "type": "executiontime",
           "style": "plain",
@@ -234,7 +236,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:efm_dark4>[</>\udb81\uddad<p:efm_dark4>]</>{{ end }}❱",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:efm_dark3>[</>\udb81\uddad<p:efm_dark3>]</>{{ end }}❱",
           "foreground": "p:efm_green",
           "type": "status",
           "style": "plain",

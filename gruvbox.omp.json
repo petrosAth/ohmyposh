@@ -1,13 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "grv_dark0": "#282828",
-    "grv_dark1": "#32302f",
-    "grv_dark2": "#3c3836",
-    "grv_dark3": "#504945",
-    "grv_light0": "#ebdbb2",
+    "grv_dark0": "#1d2021",
+    "grv_dark1": "#282828",
+    "grv_dark2": "#32302f",
+    "grv_dark3": "#3c3836",
+    "grv_dark4": "#5F574F",
+    "grv_light0": "#f9f5d7",
     "grv_light1": "#fbf1c7",
-    "grv_light2": "#f9f5d7",
+    "grv_light2": "#ebdbb2",
+    "grv_light3": "#bdae93",
+    "grv_light4": "#86796B",
     "grv_red": "#cc241d",
     "grv_orange": "#d65d0e",
     "grv_yellow": "#d79921",
@@ -19,12 +22,12 @@
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:grv_dark3",
+    "foreground": "p:grv_dark4",
     "background": "transparent"
   },
   "transient_prompt": {
     "template": "\u257c[<p:grv_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:grv_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:grv_magenta>{{ .PWD }}</>]❱ ",
-    "foreground": "p:grv_dark3",
+    "foreground": "p:grv_dark4",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -48,7 +51,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:grv_dark3>[</>{{.UserName}}",
+          "template": "<p:grv_dark4>[</>{{.UserName}}",
           "foreground": "p:grv_blue",
           "type": "session",
           "style": "plain"
@@ -57,7 +60,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:grv_dark3>|</><p:grv_yellow>\uf0e7</><p:grv_dark3>|</>{{else}}<p:grv_dark3>|</>@<p:grv_dark3>|</>{{end}}",
+          "template": "{{if .Root}}<p:grv_dark4>|</><p:grv_yellow>\uf0e7</><p:grv_dark4>|</>{{else}}<p:grv_dark4>|</>@<p:grv_dark4>|</>{{end}}",
           "foreground": "p:grv_cyan",
           "type": "session",
           "style": "plain"
@@ -66,7 +69,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:grv_dark3>]</>",
+          "template": "{{.HostName}}<p:grv_dark4>]</>",
           "foreground": "p:grv_blue",
           "type": "session",
           "style": "plain"
@@ -84,7 +87,7 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:grv_dark3>\u257e\u257c[</>  {{ .Path }}<p:grv_dark3>]</>",
+          "template": "<p:grv_dark4>\u257e\u257c[</>  {{ .Path }}<p:grv_dark4>]</>",
           "foreground": "p:grv_magenta",
           "type": "path",
           "style": "plain"
@@ -116,7 +119,7 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:grv_dark3>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:grv_dark3>|</><p:grv_yellow>\uebb5 </><p:grv_dark3>\ueab6</>{{ if gt .Working.Added 0 }}<p:grv_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:grv_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:grv_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:grv_light2> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:grv_dark3>|</><p:grv_green>\ueba4 </><p:grv_dark3>\ueab6</>{{ if gt .Staging.Added 0 }}<p:grv_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:grv_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:grv_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:grv_dark3>|</><p:grv_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:grv_dark3>|</><p:grv_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:grv_dark3>]</>",
+          "template": "<p:grv_dark4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:grv_dark4>|</><p:grv_yellow>\uebb5 </><p:grv_dark4>\ueab6</>{{ if gt .Working.Added 0 }}<p:grv_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:grv_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:grv_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:grv_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:grv_dark4>|</><p:grv_green>\ueba4 </><p:grv_dark4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:grv_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:grv_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:grv_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:grv_dark4>|</><p:grv_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:grv_dark4>|</><p:grv_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:grv_dark4>]</>",
           "foreground": "p:grv_violet",
           "type": "git",
           "style": "plain",
@@ -172,7 +175,7 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:grv_dark3>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "template": "<p:grv_dark4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:grv_cyan",
           "type": "os",
           "style": "plain"
@@ -181,39 +184,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:grv_dark3>\ueab6 </>\uea85 {{ .Name }}",
+          "template": "<p:grv_dark4>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:grv_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:grv_dark3> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:grv_dark3>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:grv_dark4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:grv_dark4>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:grv_dark3> \ueab6 </> {{ .Full }}",
+          "template": "<p:grv_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:grv_dark3> \ueab6 </> {{ .Full }}",
+          "template": "<p:grv_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:grv_dark3> \ueab6 </> {{ .Full }}",
+          "template": "<p:grv_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:grv_dark3",
+          "foreground": "p:grv_dark4",
           "template": "]"
         },
         {
@@ -222,7 +225,7 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:grv_dark3>[</><p:grv_orange>\udb81\udd1b {{ .FormattedMs }}</><p:grv_dark3>]</>",
+          "template": "\u257e\u257c<p:grv_dark4>[</><p:grv_orange>\udb81\udd1b {{ .FormattedMs }}</><p:grv_dark4>]</>",
           "foreground": "p:grv_green",
           "type": "executiontime",
           "style": "plain",
@@ -233,7 +236,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:grv_dark3>[</>\udb81\uddad<p:grv_dark3>]</>{{ end }}❱",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:grv_dark4>[</>\udb81\uddad<p:grv_dark4>]</>{{ end }}❱",
           "foreground": "p:grv_green",
           "type": "status",
           "style": "plain",

@@ -1,12 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "selb_dark0": "#181818",
-    "selb_dark1": "#252525",
-    "selb_dark2": "#3b3b3b",
-    "selb_light0": "#777777",
-    "selb_light1": "#b9b9b9",
-    "selb_light2": "#dedede",
+    "selb_dark0": "#141414",
+    "selb_dark1": "#181818",
+    "selb_dark2": "#252525",
+    "selb_dark3": "#3b3b3b",
+    "selb_dark4": "#515151",
+    "selb_light0": "#fbfbfb",
+    "selb_light1": "#dedede",
+    "selb_light2": "#b9b9b9",
+    "selb_light3": "#a0a0a0",
+    "selb_light4": "#777777",
     "selb_red": "#ed4a46",
     "selb_orange": "#e67f43",
     "selb_yellow": "#dbb32d",
@@ -18,12 +22,12 @@
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:selb_light0",
+    "foreground": "p:selb_dark4",
     "background": "transparent"
   },
   "transient_prompt": {
     "template": "\u257c[<p:selb_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:selb_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:selb_magenta>{{ .PWD }}</>]❱ ",
-    "foreground": "p:selb_light0",
+    "foreground": "p:selb_dark4",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -47,7 +51,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:selb_light0>[</>{{.UserName}}",
+          "template": "<p:selb_dark4>[</>{{.UserName}}",
           "foreground": "p:selb_blue",
           "type": "session",
           "style": "plain"
@@ -56,7 +60,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:selb_light0>|</><p:selb_yellow>\uf0e7</><p:selb_light0>|</>{{else}}<p:selb_light0>|</>@<p:selb_light0>|</>{{end}}",
+          "template": "{{if .Root}}<p:selb_dark4>|</><p:selb_yellow>\uf0e7</><p:selb_dark4>|</>{{else}}<p:selb_dark4>|</>@<p:selb_dark4>|</>{{end}}",
           "foreground": "p:selb_cyan",
           "type": "session",
           "style": "plain"
@@ -65,7 +69,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:selb_light0>]</>",
+          "template": "{{.HostName}}<p:selb_dark4>]</>",
           "foreground": "p:selb_blue",
           "type": "session",
           "style": "plain"
@@ -83,7 +87,7 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:selb_light0>\u257e\u257c[</>  {{ .Path }}<p:selb_light0>]</>",
+          "template": "<p:selb_dark4>\u257e\u257c[</>  {{ .Path }}<p:selb_dark4>]</>",
           "foreground": "p:selb_magenta",
           "type": "path",
           "style": "plain"
@@ -115,7 +119,7 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:selb_light0>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:selb_light0>|</><p:selb_yellow>\uebb5 </><p:selb_light0>\ueab6</>{{ if gt .Working.Added 0 }}<p:selb_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:selb_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:selb_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:selb_light2> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:selb_light0>|</><p:selb_green>\ueba4 </><p:selb_light0>\ueab6</>{{ if gt .Staging.Added 0 }}<p:selb_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:selb_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:selb_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:selb_light0>|</><p:selb_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:selb_light0>|</><p:selb_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:selb_light0>]</>",
+          "template": "<p:selb_dark4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:selb_dark4>|</><p:selb_yellow>\uebb5 </><p:selb_dark4>\ueab6</>{{ if gt .Working.Added 0 }}<p:selb_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:selb_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:selb_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:selb_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:selb_dark4>|</><p:selb_green>\ueba4 </><p:selb_dark4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:selb_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:selb_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:selb_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:selb_dark4>|</><p:selb_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:selb_dark4>|</><p:selb_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:selb_dark4>]</>",
           "foreground": "p:selb_violet",
           "type": "git",
           "style": "plain",
@@ -171,7 +175,7 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:selb_light0>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "template": "<p:selb_dark4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:selb_cyan",
           "type": "os",
           "style": "plain"
@@ -180,39 +184,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:selb_light0>\ueab6 </>\uea85 {{ .Name }}",
+          "template": "<p:selb_dark4>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:selb_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:selb_light0>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:selb_dark4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:selb_dark4>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:selb_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:selb_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:selb_light0> \ueab6 </> {{ .Full }}",
+          "template": "<p:selb_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:selb_light0",
+          "foreground": "p:selb_dark4",
           "template": "]"
         },
         {
@@ -221,7 +225,7 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:selb_light0>[</><p:selb_orange>\udb81\udd1b {{ .FormattedMs }}</><p:selb_light0>]</>",
+          "template": "\u257e\u257c<p:selb_dark4>[</><p:selb_orange>\udb81\udd1b {{ .FormattedMs }}</><p:selb_dark4>]</>",
           "foreground": "p:selb_green",
           "type": "executiontime",
           "style": "plain",
@@ -232,7 +236,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:selb_light0>[</>\udb81\uddad<p:selb_light0>]</>{{ end }}❱",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:selb_dark4>[</>\udb81\uddad<p:selb_dark4>]</>{{ end }}❱",
           "foreground": "p:selb_green",
           "type": "status",
           "style": "plain",

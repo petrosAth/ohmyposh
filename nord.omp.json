@@ -1,31 +1,34 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "nord0": "#2e3440",
-    "nord1": "#3b4252",
-    "nord10": "#5e81ac",
-    "nord11": "#bf616a",
-    "nord12": "#d08770",
-    "nord13": "#ebcb8b",
-    "nord14": "#a3be8c",
-    "nord15": "#b48ead",
-    "nord2": "#434c5e",
-    "nord3": "#4c566a",
-    "nord4": "#d8dee9",
-    "nord5": "#e5e9f0",
-    "nord6": "#eceff4",
-    "nord7": "#8fbcbb",
-    "nord8": "#88c0d0",
-    "nord9": "#81a1c1"
+    "nrd_dark0": "#2a303b",
+    "nrd_dark1": "#2e3440",
+    "nrd_dark2": "#3b4252",
+    "nrd_dark3": "#434c5e",
+    "nrd_dark4": "#4c566a",
+    "nrd_light0": "#eceff4",
+    "nrd_light1": "#e5e9f0",
+    "nrd_light2": "#d8dee9",
+    "nrd_light3": "#a0a8b6",
+    "nrd_light4": "#687183",
+    "nrd_red": "#bf616a",
+    "nrd_orange": "#d08770",
+    "nrd_yellow": "#ebcb8b",
+    "nrd_green": "#a3be8c",
+    "nrd_cyan": "#88c0d0",
+    "nrd_blue0": "#81a1c1",
+    "nrd_blue1": "#5e81ac",
+    "nrd_violet": "#8fbcbb",
+    "nrd_magenta": "#b48ead"
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:nord2",
+    "foreground": "p:nrd_dark3",
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:nord12>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:nord12>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:nord7>{{ .PWD }}</>]❱ ",
-    "foreground": "p:nord2",
+    "template": "\u257c[<p:nrd_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:nrd_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:nrd_violet>{{ .PWD }}</>]❱ ",
+    "foreground": "p:nrd_dark3",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -40,17 +43,17 @@
             "cache_duration": "none"
           },
           "template": "\u252e",
-          "foreground": "p:nord14",
+          "foreground": "p:nrd_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nrd_red{{ end }}"]
         },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:nord2>[</>{{.UserName}}",
-          "foreground": "p:nord9",
+          "template": "<p:nrd_dark3>[</>{{.UserName}}",
+          "foreground": "p:nrd_blue0",
           "type": "session",
           "style": "plain"
         },
@@ -58,8 +61,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:nord2>|</><p:nord13>\uf0e7</><p:nord2>|</>{{else}}<p:nord2>|</>@<p:nord2>|</>{{end}}",
-          "foreground": "p:nord8",
+          "template": "{{if .Root}}<p:nrd_dark3>|</><p:nrd_yellow>\uf0e7</><p:nrd_dark3>|</>{{else}}<p:nrd_dark3>|</>@<p:nrd_dark3>|</>{{end}}",
+          "foreground": "p:nrd_cyan",
           "type": "session",
           "style": "plain"
         },
@@ -67,8 +70,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:nord2>]</>",
-          "foreground": "p:nord9",
+          "template": "{{.HostName}}<p:nrd_dark3>]</>",
+          "foreground": "p:nrd_blue0",
           "type": "session",
           "style": "plain"
         }
@@ -85,8 +88,8 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:nord2>\u257e\u257c[</>  {{ .Path }}<p:nord2>]</>",
-          "foreground": "p:nord7",
+          "template": "<p:nrd_dark3>\u257e\u257c[</>  {{ .Path }}<p:nrd_dark3>]</>",
+          "foreground": "p:nrd_violet",
           "type": "path",
           "style": "plain"
         }
@@ -117,15 +120,15 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:nord2>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:nord2>|</><p:nord13>\uebb5 </><p:nord2>\ueab6</>{{ if gt .Working.Added 0 }}<p:nord14> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nord11> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nord13> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nord6> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nord2>|</><p:nord14>\ueba4 </><p:nord2>\ueab6</>{{ if gt .Staging.Added 0 }}<p:nord14> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nord11> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nord13> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nord2>|</><p:nord12>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nord2>|</><p:nord12>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nord2>]</>",
-          "foreground": "p:nord10",
+          "template": "<p:nrd_dark3>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:nrd_dark3>|</><p:nrd_yellow>\uebb5 </><p:nrd_dark3>\ueab6</>{{ if gt .Working.Added 0 }}<p:nrd_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:nrd_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:nrd_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:nrd_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:nrd_dark3>|</><p:nrd_green>\ueba4 </><p:nrd_dark3>\ueab6</>{{ if gt .Staging.Added 0 }}<p:nrd_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:nrd_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:nrd_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:nrd_dark3>|</><p:nrd_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:nrd_dark3>|</><p:nrd_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:nrd_dark3>]</>",
+          "foreground": "p:nrd_blue1",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nord13{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nord13{{ end }}",
-            "{{ if gt .Ahead 0 }}p:nord14{{ end }}",
-            "{{ if gt .Behind 0 }}p:nord11{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:nrd_yellow{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:nrd_yellow{{ end }}",
+            "{{ if gt .Ahead 0 }}p:nrd_green{{ end }}",
+            "{{ if gt .Behind 0 }}p:nrd_red{{ end }}"
           ]
         }
       ]
@@ -140,10 +143,10 @@
             "cache_duration": "none"
           },
           "template": "\u2515",
-          "foreground": "p:nord14",
+          "foreground": "p:nrd_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nrd_red{{ end }}"]
         },
         {
           "properties": {
@@ -173,8 +176,8 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:nord2>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
-          "foreground": "p:nord8",
+          "template": "<p:nrd_dark3>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "foreground": "p:nrd_cyan",
           "type": "os",
           "style": "plain"
         },
@@ -182,39 +185,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:nord2>\ueab6 </>\uea85 {{ .Name }}",
-          "foreground": "p:nord8",
+          "template": "<p:nrd_dark3>\ueab6 </>\uea85 {{ .Name }}",
+          "foreground": "p:nrd_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:nord2> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:nord2>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:nrd_dark3> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:nrd_dark3>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "template": "<p:nrd_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "template": "<p:nrd_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:nord2> \ueab6 </> {{ .Full }}",
+          "template": "<p:nrd_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:nord2",
+          "foreground": "p:nrd_dark3",
           "template": "]"
         },
         {
@@ -223,22 +226,22 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:nord2>[</><p:nord12>\udb81\udd1b {{ .FormattedMs }}</><p:nord2>]</>",
-          "foreground": "p:nord14",
+          "template": "\u257e\u257c<p:nrd_dark3>[</><p:nrd_orange>\udb81\udd1b {{ .FormattedMs }}</><p:nrd_dark3>]</>",
+          "foreground": "p:nrd_green",
           "type": "executiontime",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nrd_red{{ end }}"]
         },
         {
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nord2>[</>\udb81\uddad<p:nord2>]</>{{ end }}❱",
-          "foreground": "p:nord14",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:nrd_dark3>[</>\udb81\uddad<p:nrd_dark3>]</>{{ end }}❱",
+          "foreground": "p:nrd_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:nord11{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:nrd_red{{ end }}"]
         }
       ],
       "newline": true

@@ -1,33 +1,33 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "odwr_dark0": "#101012",
-    "odwr_dark1": "#232326",
-    "odwr_dark2": "#2c2d31",
-    "odwr_dark3": "#35363b",
-    "odwr_dark4": "#48494e",
-    "odwr_light0": "#d2d3d6",
-    "odwr_light1": "#c3c5c9",
-    "odwr_light2": "#a7aab0",
-    "odwr_light3": "#818387",
-    "odwr_light4": "#5a5b5e",
-    "odwr_red": "#de5d68",
-    "odwr_orange": "#c49060",
-    "odwr_yellow": "#dbb671",
-    "odwr_green": "#8fb573",
-    "odwr_cyan": "#51a8b3",
-    "odwr_blue": "#57a5e5",
-    "odwr_violet": "#bb70d2",
-    "odwr_magenta": "#d1648f"
+    "mon_dark0": "#22231d",
+    "mon_dark1": "#272822",
+    "mon_dark2": "#36362d",
+    "mon_dark3": "#454439",
+    "mon_dark4": "#5d5a4b",
+    "mon_light0": "#ffffff",
+    "mon_light1": "#f8f8f2",
+    "mon_light2": "#dddcd3",
+    "mon_light3": "#c3c1b6",
+    "mon_light4": "#75715e",
+    "mon_red": "#ff4f4f",
+    "mon_orange": "#fd971f",
+    "mon_yellow": "#e6db74",
+    "mon_green": "#a6e22e",
+    "mon_cyan": "#66d9ef",
+    "mon_blue": "#5fafff",
+    "mon_violet": "#ae81ff",
+    "mon_magenta": "#f92672"
   },
   "secondary_prompt": {
     "template": " ",
-    "foreground": "p:odwr_dark4",
+    "foreground": "p:mon_dark4",
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:odwr_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:odwr_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:odwr_magenta>{{ .PWD }}</>]❱ ",
-    "foreground": "p:odwr_dark4",
+    "template": "\u257c[<p:mon_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:mon_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:mon_magenta>{{ .PWD }}</>]❱ ",
+    "foreground": "p:mon_dark4",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -42,17 +42,17 @@
             "cache_duration": "none"
           },
           "template": "\u252e",
-          "foreground": "p:odwr_green",
+          "foreground": "p:mon_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:odwr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:mon_red{{ end }}"]
         },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:odwr_dark4>[</>{{.UserName}}",
-          "foreground": "p:odwr_blue",
+          "template": "<p:mon_dark4>[</>{{.UserName}}",
+          "foreground": "p:mon_blue",
           "type": "session",
           "style": "plain"
         },
@@ -60,8 +60,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .Root}}<p:odwr_dark4>|</><p:odwr_yellow>\uf0e7</><p:odwr_dark4>|</>{{else}}<p:odwr_dark4>|</>@<p:odwr_dark4>|</>{{end}}",
-          "foreground": "p:odwr_cyan",
+          "template": "{{if .Root}}<p:mon_dark4>|</><p:mon_yellow>\uf0e7</><p:mon_dark4>|</>{{else}}<p:mon_dark4>|</>@<p:mon_dark4>|</>{{end}}",
+          "foreground": "p:mon_cyan",
           "type": "session",
           "style": "plain"
         },
@@ -69,8 +69,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.HostName}}<p:odwr_dark4>]</>",
-          "foreground": "p:odwr_blue",
+          "template": "{{.HostName}}<p:mon_dark4>]</>",
+          "foreground": "p:mon_blue",
           "type": "session",
           "style": "plain"
         }
@@ -87,8 +87,8 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:odwr_dark4>\u257e\u257c[</>  {{ .Path }}<p:odwr_dark4>]</>",
-          "foreground": "p:odwr_magenta",
+          "template": "<p:mon_dark4>\u257e\u257c[</>  {{ .Path }}<p:mon_dark4>]</>",
+          "foreground": "p:mon_magenta",
           "type": "path",
           "style": "plain"
         }
@@ -119,15 +119,15 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:odwr_dark4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:odwr_dark4>|</><p:odwr_yellow>\uebb5 </><p:odwr_dark4>\ueab6</>{{ if gt .Working.Added 0 }}<p:odwr_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:odwr_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:odwr_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:odwr_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:odwr_dark4>|</><p:odwr_green>\ueba4 </><p:odwr_dark4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:odwr_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:odwr_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:odwr_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:odwr_dark4>|</><p:odwr_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:odwr_dark4>|</><p:odwr_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:odwr_dark4>]</>",
-          "foreground": "p:odwr_violet",
+          "template": "<p:mon_dark4>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:mon_dark4>|</><p:mon_yellow>\uebb5 </><p:mon_dark4>\ueab6</>{{ if gt .Working.Added 0 }}<p:mon_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:mon_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:mon_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:mon_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:mon_dark4>|</><p:mon_green>\ueba4 </><p:mon_dark4>\ueab6</>{{ if gt .Staging.Added 0 }}<p:mon_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:mon_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:mon_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:mon_dark4>|</><p:mon_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:mon_dark4>|</><p:mon_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:mon_dark4>]</>",
+          "foreground": "p:mon_violet",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:odwr_yellow{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:odwr_yellow{{ end }}",
-            "{{ if gt .Ahead 0 }}p:odwr_green{{ end }}",
-            "{{ if gt .Behind 0 }}p:odwr_red{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:mon_yellow{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:mon_yellow{{ end }}",
+            "{{ if gt .Ahead 0 }}p:mon_green{{ end }}",
+            "{{ if gt .Behind 0 }}p:mon_red{{ end }}"
           ]
         }
       ]
@@ -142,10 +142,10 @@
             "cache_duration": "none"
           },
           "template": "\u2515",
-          "foreground": "p:odwr_green",
+          "foreground": "p:mon_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:odwr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:mon_red{{ end }}"]
         },
         {
           "properties": {
@@ -175,8 +175,8 @@
             "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:odwr_dark4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
-          "foreground": "p:odwr_cyan",
+          "template": "<p:mon_dark4>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
+          "foreground": "p:mon_cyan",
           "type": "os",
           "style": "plain"
         },
@@ -184,39 +184,39 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:odwr_dark4>\ueab6 </>\uea85 {{ .Name }}",
-          "foreground": "p:odwr_cyan",
+          "template": "<p:mon_dark4>\ueab6 </>\uea85 {{ .Name }}",
+          "foreground": "p:mon_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:odwr_dark4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:odwr_dark4>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "template": "<p:mon_dark4> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:mon_dark4>|</> {{ .Venv }}{{ end }}{{ end }}",
           "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:odwr_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:mon_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:odwr_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:mon_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:odwr_dark4> \ueab6 </> {{ .Full }}",
+          "template": "<p:mon_dark4> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:odwr_dark4",
+          "foreground": "p:mon_dark4",
           "template": "]"
         },
         {
@@ -225,22 +225,22 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:odwr_dark4>[</><p:odwr_orange>\udb81\udd1b {{ .FormattedMs }}</><p:odwr_dark4>]</>",
-          "foreground": "p:odwr_green",
+          "template": "\u257e\u257c<p:mon_dark4>[</><p:mon_orange>\udb81\udd1b {{ .FormattedMs }}</><p:mon_dark4>]</>",
+          "foreground": "p:mon_green",
           "type": "executiontime",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:odwr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:mon_red{{ end }}"]
         },
         {
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:odwr_dark4>[</>\udb81\uddad<p:odwr_dark4>]</>{{ end }}❱",
-          "foreground": "p:odwr_green",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:mon_dark4>[</>\udb81\uddad<p:mon_dark4>]</>{{ end }}❱",
+          "foreground": "p:mon_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .Code 0 }}p:odwr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:mon_red{{ end }}"]
         }
       ],
       "newline": true

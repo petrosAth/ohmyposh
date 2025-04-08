@@ -26,11 +26,11 @@
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:dr_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:dr_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:dr_magenta>{{ .pwd }}</>]❱ ",
+    "template": "\u257c[<p:dr_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:dr_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:dr_magenta>{{ .PWD }}</>]❱ ",
     "foreground": "p:dr_dark3",
     "background": "transparent"
   },
-  "console_title_template": "{{ .folder }}",
+  "console_title_template": "{{ .Folder }}",
   "blocks": [
     {
       "type": "prompt",
@@ -45,13 +45,13 @@
           "foreground": "p:dr_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .code 0 }}p:dr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:dr_red{{ end }}"]
         },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:dr_dark3>[</>{{.username}}",
+          "template": "<p:dr_dark3>[</>{{.UserName}}",
           "foreground": "p:dr_blue",
           "type": "session",
           "style": "plain"
@@ -60,7 +60,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{if .root}}<p:dr_dark3>|</><p:dr_yellow>\uf0e7</><p:dr_dark3>|</>{{else}}<p:dr_dark3>|</>@<p:dr_dark3>|</>{{end}}",
+          "template": "{{if .Root}}<p:dr_dark3>|</><p:dr_yellow>\uf0e7</><p:dr_dark3>|</>{{else}}<p:dr_dark3>|</>@<p:dr_dark3>|</>{{end}}",
           "foreground": "p:dr_cyan",
           "type": "session",
           "style": "plain"
@@ -69,7 +69,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.hostname}}<p:dr_dark3>]</>",
+          "template": "{{.HostName}}<p:dr_dark3>]</>",
           "foreground": "p:dr_blue",
           "type": "session",
           "style": "plain"
@@ -87,7 +87,7 @@
             "style": "agnoster_short",
             "max_depth": 4
           },
-          "template": "<p:dr_dark3>\u257e\u257c[</>  {{ .path }}<p:dr_dark3>]</>",
+          "template": "<p:dr_dark3>\u257e\u257c[</>  {{ .Path }}<p:dr_dark3>]</>",
           "foreground": "p:dr_magenta",
           "type": "path",
           "style": "plain"
@@ -119,15 +119,15 @@
             "tag_icon": "\uea66 ",
             "truncate_symbol": "\ueab6"
           },
-          "template": "<p:dr_dark3>\u257e\u257c[</>{{ .upstreamicon }}{{ .head }} {{ .branchstatus }}{{ if .working.changed }}<p:dr_dark3>|</><p:dr_yellow>\uebb5 </><p:dr_dark3>\ueab6</>{{ if gt .working.added 0 }}<p:dr_green> \uf457 {{ .working.added }}</>{{ end }}{{ if gt .working.deleted 0 }}<p:dr_red> \uf458 {{ .working.deleted }}</>{{ end }}{{ if gt .working.modified 0 }}<p:dr_yellow> \uf459 {{ .working.modified }}</>{{ end }}{{ if gt .working.untracked 0 }}<p:dr_light0> \udb80\udea0 {{ .working.untracked }}</>{{ end }}{{ end }}{{ if .staging.changed }}<p:dr_dark3>|</><p:dr_green>\ueba4 </><p:dr_dark3>\ueab6</>{{ if gt .staging.added 0 }}<p:dr_green> \uf457 {{ .staging.added }}</>{{ end }}{{ if gt .staging.deleted 0 }}<p:dr_red> \uf458 {{ .staging.deleted }}</>{{ end }}{{ if gt .staging.modified 0 }}<p:dr_yellow> \uf459 {{ .staging.modified }}</>{{ end }}{{ end }}{{ if gt .stashcount 0 }}<p:dr_dark3>|</><p:dr_orange>\ueb4b {{.stashcount}}</>{{ end }}{{ if gt .worktreecount 0 }}{{if .isworktree}}<p:dr_dark3>|</><p:dr_orange>\uf1bb {{.worktreecount}}</>{{ end }}{{ end }}<p:dr_dark3>]</>",
+          "template": "<p:dr_dark3>\u257e\u257c[</>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<p:dr_dark3>|</><p:dr_yellow>\uebb5 </><p:dr_dark3>\ueab6</>{{ if gt .Working.Added 0 }}<p:dr_green> \uf457 {{ .Working.Added }}</>{{ end }}{{ if gt .Working.Deleted 0 }}<p:dr_red> \uf458 {{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Modified 0 }}<p:dr_yellow> \uf459 {{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Untracked 0 }}<p:dr_light0> \udb80\udea0 {{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if .Staging.Changed }}<p:dr_dark3>|</><p:dr_green>\ueba4 </><p:dr_dark3>\ueab6</>{{ if gt .Staging.Added 0 }}<p:dr_green> \uf457 {{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Deleted 0 }}<p:dr_red> \uf458 {{ .Staging.Deleted }}</>{{ end }}{{ if gt .Staging.Modified 0 }}<p:dr_yellow> \uf459 {{ .Staging.Modified }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }}<p:dr_dark3>|</><p:dr_orange>\ueb4b {{.StashCount}}</>{{ end }}{{ if gt .WorktreeCount 0 }}{{if .IsWorkTree}}<p:dr_dark3>|</><p:dr_orange>\uf1bb {{.WorktreeCount}}</>{{ end }}{{ end }}<p:dr_dark3>]</>",
           "foreground": "p:dr_violet",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if or (.working.changed) (.staging.changed) }}p:dr_yellow{{ end }}",
-            "{{ if and (gt .ahead 0) (gt .behind 0) }}p:dr_yellow{{ end }}",
-            "{{ if gt .ahead 0 }}p:dr_green{{ end }}",
-            "{{ if gt .behind 0 }}p:dr_red{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:dr_yellow{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:dr_yellow{{ end }}",
+            "{{ if gt .Ahead 0 }}p:dr_green{{ end }}",
+            "{{ if gt .Behind 0 }}p:dr_red{{ end }}"
           ]
         }
       ]
@@ -145,7 +145,7 @@
           "foreground": "p:dr_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .code 0 }}p:dr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:dr_red{{ end }}"]
         },
         {
           "properties": {
@@ -172,10 +172,10 @@
             "ubuntu": "\uf31b ",
             "endeavour": "\uf322 ",
             "windows": "\uf871 ",
-            "wsl": "wsl",
+            "wsl": "WSL",
             "wsl_separator": " "
           },
-          "template": "<p:dr_dark3>[</>{{ if .wsl }}wsl {{ end }}{{.icon}}",
+          "template": "<p:dr_dark3>[</>{{ if .WSL }}WSL {{ end }}{{.Icon}}",
           "foreground": "p:dr_cyan",
           "type": "os",
           "style": "plain"
@@ -184,32 +184,32 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<p:dr_dark3>\ueab6 </>\uea85 {{ .name }}",
+          "template": "<p:dr_dark3>\ueab6 </>\uea85 {{ .Name }}",
           "foreground": "p:dr_cyan",
           "type": "shell",
           "style": "plain"
         },
         {
           "style": "plain",
-          "template": "<p:dr_dark3> \ueab6 </> {{ .full }}{{ if .error }}{{ .error }}{{ else }}{{ if .venv }}<p:dr_dark3>|</> {{ .venv }}{{ end }}{{ end }}",
-          "foreground": "#ffd43b",
+          "template": "<p:dr_dark3> \ueab6 </> {{ .Full }}{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}<p:dr_dark3>|</> {{ .Venv }}{{ end }}{{ end }}",
+          "foreground": "#FFD43B",
           "type": "python"
         },
         {
           "style": "plain",
-          "template": "<p:dr_dark3> \ueab6 </> {{ .full }}",
+          "template": "<p:dr_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#339933",
           "type": "node"
         },
         {
           "style": "plain",
-          "template": "<p:dr_dark3> \ueab6 </> {{ .full }}",
+          "template": "<p:dr_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#c3002f",
           "type": "angular"
         },
         {
           "style": "plain",
-          "template": "<p:dr_dark3> \ueab6 </> {{ .full }}",
+          "template": "<p:dr_dark3> \ueab6 </> {{ .Full }}",
           "foreground": "#149eca",
           "type": "react"
         },
@@ -225,22 +225,22 @@
             "style": "austin",
             "threshold": 2000
           },
-          "template": "\u257e\u257c<p:dr_dark3>[</><p:dr_orange>\udb81\udd1b {{ .formattedms }}</><p:dr_dark3>]</>",
+          "template": "\u257e\u257c<p:dr_dark3>[</><p:dr_orange>\udb81\udd1b {{ .FormattedMs }}</><p:dr_dark3>]</>",
           "foreground": "p:dr_green",
           "type": "executiontime",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .code 0 }}p:dr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:dr_red{{ end }}"]
         },
         {
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ if gt .code 0 }}\u257e\u257c<p:dr_dark3>[</>\udb81\uddad<p:dr_dark3>]</>{{ end }}❱",
+          "template": "{{ if gt .Code 0 }}\u257e\u257c<p:dr_dark3>[</>\udb81\uddad<p:dr_dark3>]</>{{ end }}❱",
           "foreground": "p:dr_green",
           "type": "status",
           "style": "plain",
-          "foreground_templates": ["{{ if gt .code 0 }}p:dr_red{{ end }}"]
+          "foreground_templates": ["{{ if gt .Code 0 }}p:dr_red{{ end }}"]
         }
       ],
       "newline": true

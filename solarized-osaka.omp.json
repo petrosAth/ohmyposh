@@ -26,11 +26,11 @@
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "\u257c[<p:solo_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:solo_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:solo_magenta>{{ .pwd }}</>]❱ ",
+    "template": "\u257c[<p:solo_orange>{{ now | date \"\ueab0 01/02\" }}</> \ueab6 <p:solo_orange>{{ now | date \"\ue641 15:04:05\" }}</>]\u257e\u257c[<p:solo_magenta>{{ .PWD }}</>]❱ ",
     "foreground": "p:solo_dark3",
     "background": "transparent"
   },
-  "console_title_template": "{{ .folder }}",
+  "console_title_template": "{{ .Folder }}",
   "blocks": [
     {
       "type": "prompt",
